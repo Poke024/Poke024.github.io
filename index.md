@@ -2,4 +2,9 @@
 layout: default
 title: Home
 ---
-<h1>Hello World!</h1>
+<main>
+    <div id="homeLeft">
+    </div>
+    <div id="homeRight">
+    </div>
+</main>
