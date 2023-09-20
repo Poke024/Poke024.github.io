@@ -1,0 +1,71 @@
+#navBar {
+    overflow: hidden;
+    list-style-type: none;
+    background-color: #FFD23F;
+    border-radius: 25px;
+    width: calc(100% - 55px);
+    height: 40px;
+    margin: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 24px;
+    position: fixed;
+
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.navItem{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.navItem.left {
+    float: left;
+}
+
+.navItem.right {
+    float: right;
+}
+
+.navDivider {
+    margin: 5px 10px 5px 10px;
+    height: 75%;
+    width: 1px;
+    border-color: #13262F;
+    border-width: 0px;
+    border-left-width: 1px;
+    border-style: solid;
+}
+
+.navDivider.left {
+    float: left;
+}
+.navDivider.right {
+    float: right;
+}
+
+.navItem a {
+    color: #13262F;
+    text-decoration: none;
+}
+.navItem a:hover {
+    color: #8B786D;
+}
+
+.socialIcon {
+    width: 30px;
+    height: 30px;
+}
+
+.downloadIcon {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}

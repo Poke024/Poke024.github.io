@@ -1,0 +1,6 @@
+- name: StrikerSets
+  summary: An Overwolf in-game overlay application that recommends awakenings for the game Omega Strikers.
+- name: MentalMural
+  summary: HackKU 2023 - A mental health / personal journaling web application that paints a mural as you make entries.
+- name: ContinentalEncounters
+  summary: A Tabletop Role-playing Game Compendium application built on Windows Forms.

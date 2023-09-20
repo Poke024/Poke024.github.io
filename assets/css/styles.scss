@@ -1,0 +1,29 @@
+---
+---
+
+@import "navigation";
+@import "index";
+
+@font-face {
+    font-family: 'Roboto Mono', monospace;
+    src: url('fonts/RobotoMono-Regular.ttf')
+}
+
+body {
+    background-color: #F7F7FF;
+    padding: 0px;
+    margin: 0px;
+    font-family: "Roboto Mono", monospace;
+    
+    border-color: orange;
+    border-width: 1px;
+    border-style: solid;
+}
+
+main {
+    margin: 55px 5px 5px 5px;
+    
+    border-color: purple;
+    border-width: 1px;
+    border-style: solid;
+}
