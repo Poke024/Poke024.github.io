@@ -1,7 +1,11 @@
-<div class="tabBar">
-    <ul id="navList">
-        {% for item in site.data.navigation %}
-            <li class="navLink" id="{{ item.name }}"><a href="{{ item.link }}" {% if page.url == item.link %}style="color: red;"{% endif %}>{{ item.name }}</a></li>
-        {% endfor %}
-    </ul>
-</div>
+<ul id="navBar">
+    {% for item in site.data.navigation %}
+        <li class="navItem left" id="{{ item.name }}"><a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a></li>
+        {% if item.name != "Projects" %}<div class="navDivider left"></div>{% endif %}
+    {% endfor %}
+    {% for item in site.data.socials %}
+        <li class="navItem right"><img class="socialIcon" src="{{ item.src }}"></li>
+        <div class="navDivider right"></div>
+    {% endfor %}
+    <li class="navItem right"><img class="downloadIcon" src="/assets/images/download.png">Resume</li>
+</ul>

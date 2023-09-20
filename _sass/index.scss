@@ -1,0 +1,47 @@
+#homeLeft {
+    width: calc(70% - 5px);
+    float: left;
+}
+
+#homeRight {
+    width: calc(30% - 5px);
+    float: right;
+}
+
+.sectionBox {
+    display: flex;
+    width: 100%;
+    border-radius: 25px;
+}
+
+.wrapper {
+    padding: 10px;
+}
+
+#profile {
+    background-color: #457EAC;
+}
+
+#projects {
+    background-color: #13262F;
+    color: #F7F7FF;
+}
+
+.projectBox {
+    background-color: #F7F7FF;
+    padding: 5px;
+    height: 300px;
+    width: 400px;
+}
+
+.projectImg {
+    height: 90%;
+}
+
+.projectDesc {
+    height: 10%;
+}
+
+.boxSpacer {
+    width: 10px;
+}
