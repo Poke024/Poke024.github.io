@@ -1,6 +1,20 @@
 - name: StrikerSets
-  summary: An Overwolf in-game overlay application that recommends awakenings for the game Omega Strikers.
+  status: In Development
+  summary: An Overwolf in-game overlay app that recommends awakenings for the game Omega Strikers.
+  language: Typescript
+  preview: .\assets\images\previews\StrikerSets_preview.png
 - name: MentalMural
-  summary: HackKU 2023 - A mental health / personal journaling web application that paints a mural as you make entries.
+  status: In Development
+  summary: HackKU 2023 - A mental health / personal journaling web app that paints a mural as you make entries.
+  language: C#
+  preview: .\assets\images\previews\MentalMural_preview.png
 - name: ContinentalEncounters
-  summary: A Tabletop Role-playing Game Compendium application built on Windows Forms.
+  status: In Development
+  summary: A Tabletop Role-playing Game Compendium app built on Windows Forms.
+  language: C#
+  preview: .\assets\images\previews\ContinentalEncounters_preview.png
+- name: ML4MC
+  status: In Developmont
+  summary: Senior Capstone - Implementing machine learning to complete objectives and tasks in Minecraft.
+  language: Python
+  preview: .\assets\images\previews\ML4MC_preview.png

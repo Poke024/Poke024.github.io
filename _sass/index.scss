@@ -1,25 +1,59 @@
-#homeLeft {
-    width: calc(70% - 5px);
-    float: left;
+.row {
+    display: flex;
+    height: 100%;
 }
 
-#homeRight {
-    width: calc(30% - 5px);
+.row .left {
+    max-width: 70%;
+    width: fit-content;
+}
+
+.row .right {
+    position: relative;
+    width: calc(30% - 25px);
     float: right;
+    margin: 0 auto;
 }
 
 .sectionBox {
     display: flex;
     width: 100%;
-    border-radius: 25px;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
 }
 
 .wrapper {
-    padding: 10px;
+    width: calc(100% - 30px);
+    height: calc(100% - 25px);
+    padding: 10px 15px 15px 15px;
 }
 
 #profile {
     background-color: #457EAC;
+}
+
+#profileInfo h2 {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+#profileInfo h3 {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+#profileInfo p {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+#profilePic {
+    width: 100px;
+    margin: 0 auto;
 }
 
 #projects {
@@ -27,19 +61,64 @@
     color: #F7F7FF;
 }
 
+#projectsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .projectBox {
     background-color: #F7F7FF;
     padding: 5px;
-    height: 300px;
+    height: 265px;
     width: 400px;
+    color: #13262F;
 }
 
-.projectImg {
-    height: 90%;
+.projectPreview {
+    width: 300px;
+    height: 150px;
+    padding: 5px;
+
+    border-color: darkgray;
+    border-width: 1px;
+    border-style: solid;
 }
 
-.projectDesc {
-    height: 10%;
+.projectInfo {
+}
+
+.projectHeader {
+    display: flex;
+}
+
+.headerInfo {
+    width: fit-content;
+}
+
+.headerInfo h3 {
+    padding: 0px;
+    margin: 0px;
+}
+
+.headerInfo p {
+    padding: 0px;
+    margin: 0px;
+}
+
+.projectLanguage {
+    background-color: #FFD23F;
+    color: #13262F;
+    width: fit-content;
+    margin: 0 0 auto auto;
+    padding: 5px;
+    float: right;
+    border-radius: 25px;
+}
+
+.projectSummary p {
+    padding: 0px;
+    margin: 0px;
 }
 
 .boxSpacer {

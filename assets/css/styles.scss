@@ -14,14 +14,14 @@ body {
     padding: 0px;
     margin: 0px;
     font-family: "Roboto Mono", monospace;
-    
-    border-color: orange;
-    border-width: 1px;
-    border-style: solid;
+    height: 100%;
+    width: 100%;
 }
 
 main {
     margin: 55px 5px 5px 5px;
+    height: calc(100% - 55px);
+    width: 100%;
     
     border-color: purple;
     border-width: 1px;

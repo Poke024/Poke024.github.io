@@ -1,4 +1,4 @@
 - name: Twitter
-  src: .\assets\images\twitter_logo.svg
+  src: .\assets\images\logos\twitter_logo.svg
 - name: GitHub
-  src: .\assets\images\github-mark.svg
+  src: .\assets\images\logos\github-mark.svg
