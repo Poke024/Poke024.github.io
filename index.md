@@ -9,17 +9,17 @@ title: Home
                 <h1>Current Projects</h1>
                 <div id="projectsContainer">
                     {% for item in site.data.projects %}
-                        <div class="projectBox">
-                            <img class="projectPreview" src="{{ item.preview }}">
-                            <div class="projectInfo">
-                                <div class="projectHeader">
-                                    <div class="headerInfo">
+                        <div class="projectPreview">
+                            <img class="previewImg" src="{{ item.preview }}">
+                            <div class="previewInfo">
+                                <div class="previewHeader">
+                                    <div class="previewHeaderInfo">
                                         <h3>{{ item.name }}</h3>
                                         <p>> {{ item.status }}</p>
                                     </div>
-                                    <p class="projectLanguage">{{ item.language }}</p>
+                                    <p class="previewLanguage">{{ item.language }}</p>
                                 </div>
-                                <div class="projectSummary">
+                                <div class="previewSummary">
                                     <p>{{ item.summary }}</p>
                                 </div>
                             </div>

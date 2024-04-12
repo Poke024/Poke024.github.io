@@ -1,0 +1,58 @@
+.projectPreview {
+    background-color: #F7F7FF;
+    padding: 5px;
+    height: 265px;
+    width: 400px;
+    color: #13262F;
+}
+
+.previewImg {
+    width: 300px;
+    height: 150px;
+    padding: 5px;
+
+    border-color: darkgray;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.previewInfo {
+    padding: 0 5px 5px 5px;
+}
+
+.previewHeader {
+    display: flex;
+}
+
+.previewHeaderInfo {
+    width: fit-content;
+}
+
+.previewHeaderInfo h3 {
+    padding: 0px;
+    margin: 0px;
+}
+
+.previewHeaderInfo p {
+    padding: 0px;
+    margin: 0px;
+}
+
+.previewLanguage {
+    background-color: #FFD23F;
+    color: #13262F;
+    width: fit-content;
+    margin: 0 0 auto auto;
+    padding: 5px;
+    float: right;
+    border-radius: 25px;
+}
+
+.previewSummary p {
+    padding: 0px;
+    margin: 0px;
+}
+
+.boxSpacer {
+    width: 10px;
+}

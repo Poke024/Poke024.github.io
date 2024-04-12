@@ -3,6 +3,7 @@
 
 @import "navigation";
 @import "index";
+@import "preview";
 
 @font-face {
     font-family: 'Roboto Mono', monospace;
@@ -19,11 +20,7 @@ body {
 }
 
 main {
-    margin: 55px 5px 5px 5px;
+    margin: 55px auto;
     height: calc(100% - 55px);
     width: 100%;
-    
-    border-color: purple;
-    border-width: 1px;
-    border-style: solid;
 }
