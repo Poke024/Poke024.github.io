@@ -1,11 +1,13 @@
-<ul id="navBar">
+<div class="navBar">
     {% for item in site.data.navigation %}
-        <li class="navItem left" id="{{ item.name }}"><a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a></li>
-        {% if item.name != "Projects" %}<div class="navDivider left"></div>{% endif %}
+        <a class="navLink" id="{{item.name}}" href="{{item.link}}">{{ item.name }}</a>
+        {% if item.name != "About" %}<div class="navDivider"></div>{% endif %}
     {% endfor %}
+    <div class="navSpacer"></div>
+    <div id="resume"><img class="navIcon" src="./assets/images/icons/download.png">Resume</div>
+    <div class="navDivider"></div>
     {% for item in site.data.socials %}
-        <li class="navItem right"><img class="socialIcon" src="{{ item.src }}"></li>
-        <div class="navDivider right"></div>
+        <img class="navIcon " src="{{ item.src }}">
+        {% if item.name != "Twitter" %}<div class="navDivider"></div>{% endif %}
     {% endfor %}
-    <li class="navItem right"><img class="downloadIcon" src="./assets/images/icons/download.png">Resume</li>
-</ul>
+</div>

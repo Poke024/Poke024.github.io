@@ -1,72 +1,56 @@
-#navBar {
-    overflow: hidden;
-    list-style-type: none;
-    background-color: #FFD23F;
-    border-radius: 25px;
-    width: calc(100% - 55px);
-    height: 40px;
-    margin: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 24px;
-    position: fixed;
-    top: 0px;
-
-    border-color: black;
-    border-width: 1px;
-    border-style: solid;
-}
-
-.navItem{
-    height: 100%;
-    display: flex;
+.navBar {
     align-items: center;
-    justify-content: center;
-    border: none;
-    outline: none;
+    background-color: #FFD23F;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 25px;
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 24px;
+    margin: 5px 5px 0px 5px;
+    padding: 5px 25px 5px 25px;
+    height: 30px;
+    width: calc(100% - 62px);
+    overflow: hidden;
+    position: fixed;
+}
+
+.navLink{
+    align-content: center;
+    align-self: flex-start;
+    color: #13262F;
     cursor: pointer;
+    height: 100%;
+    text-decoration: none;
 }
 
-.navItem.left {
-    float: left;
-}
-
-.navItem.right {
-    float: right;
+.navLink:hover {
+    color: #8B786D;
 }
 
 .navDivider {
-    margin: 5px 10px 5px 10px;
-    height: 75%;
-    width: 1px;
     border-color: #13262F;
     border-width: 0px;
     border-left-width: 1px;
     border-style: solid;
+    height: 100%;
+    margin: 5px 10px 5px 10px;
+    width: 1px;
 }
 
-.navDivider.left {
-    float: left;
-}
-.navDivider.right {
-    float: right;
+.navSpacer {
+    flex-grow: 2;
 }
 
-.navItem a {
-    color: #13262F;
-    text-decoration: none;
-}
-.navItem a:hover {
-    color: #8B786D;
+#resume {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
-.socialIcon {
-    width: 30px;
-    height: 30px;
-}
-
-.downloadIcon {
-    width: 30px;
-    height: 30px;
-    margin-right: 5px;
+.navIcon {
+    align-self: flex-end;
+    cursor: pointer;
+    max-height: 30px;
 }
