@@ -1,4 +1,6 @@
-- name: Twitter
-  src: ./assets/images/logos/twitter_logo.svg
 - name: GitHub
   src: ./assets/images/logos/github-mark.svg
+- name: LinkedIn
+  src: ./assets/images/logos/linkedin_128.png
+- name: Twitter
+  src: ./assets/images/logos/twitter_logo.svg
