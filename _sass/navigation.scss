@@ -1,28 +1,32 @@
 .navBar {
     align-items: center;
     background-color: #FFD23F;
-    border-color: black;
-    border-style: solid;
-    border-width: 1px;
     border-radius: 25px;
     display: flex;
     flex-flow: row nowrap;
     font-size: 24px;
+    height: 30px;
     margin: 5px 5px 0px 5px;
     padding: 5px 25px 5px 25px;
-    height: 30px;
-    width: calc(100% - 62px);
-    overflow: hidden;
     position: fixed;
+    overflow: hidden;
+    width: calc(100% - 60px);
+    z-index: 10;
 }
 
 .navLink{
     align-content: center;
     align-self: flex-start;
-    color: #13262F;
+    color: black;
     cursor: pointer;
     height: 100%;
     text-decoration: none;
+    transition: 0.3s;
+}
+
+.navLink p {
+    margin: 0px 0px 0px 5px;
+    padding: 0px;
 }
 
 .navLink:hover {
@@ -30,7 +34,7 @@
 }
 
 .navDivider {
-    border-color: #13262F;
+    border-color: black;
     border-width: 0px;
     border-left-width: 1px;
     border-style: solid;

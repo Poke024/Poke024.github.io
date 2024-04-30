@@ -1,5 +1,6 @@
 ---
 ---
+@import "bubble";
 @import "navigation";
 @import "index";
 @import "preview";
@@ -16,7 +17,7 @@ html {
 }
 
 body {
-    background-color: #F7F7FF;
+    background-color: #EFEFEF;
     font-family: "Roboto Mono", monospace;
     margin: 0px;
     min-height: 100%;
@@ -24,7 +25,13 @@ body {
 }
 
 main {
-    padding-top: 55px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 55px 5px 0px 5px;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
 }

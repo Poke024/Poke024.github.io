@@ -1,20 +1,25 @@
+- name: Card Game (Name TBD)
+  status: In Development
+  summary: A Godot card game project focusing on minimizing RNG mechanics and maximizing player agency over RNG.
+  language: Godot
+  preview: 
 - name: StrikerSets
   status: In Development
   summary: An Overwolf in-game overlay app that recommends awakenings for the game Omega Strikers.
   language: Typescript
   preview: ./assets/images/previews/StrikerSets_preview.png
-- name: MentalMural
-  status: In Development
-  summary: HackKU 2023 - A mental health / personal journaling web app that paints a mural using entries.
-  language: C#
-  preview: ./assets/images/previews/MentalMural_preview.png
 - name: ContinentalEncounters
   status: In Development
-  summary: A Tabletop Role-playing Game Compendium app built on Windows Forms.
+  summary: A tabletop role-playing game companion app built on Windows forms.
   language: C#
   preview: ./assets/images/previews/ContinentalEncounters_preview.png
 - name: ML4MC
-  status: In Developmont
+  status: Complete
   summary: Senior Capstone - Implementing machine learning to complete objectives and tasks in Minecraft.
   language: Python
   preview: ./assets/images/previews/ML4MC_preview.png
+- name: MentalMural
+  status: Discontinued
+  summary: HackKU 2023 - A mental health / personal journaling web app that paints a mural using entries.
+  language: C#/.NET
+  preview: ./assets/images/previews/MentalMural_preview.png
