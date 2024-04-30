@@ -4,10 +4,10 @@
         {% if item.name != "About" %}<div class="navDivider"></div>{% endif %}
     {% endfor %}
     <div class="navSpacer"></div>
-    <div id="resume"><img class="navIcon" src="./assets/images/icons/download.png">Resume</div>
+    <a class="navLink" href="assets\files\Adair_Torres_Resume.pdf" download="Adair_Torres_Resume"><div id="resume"><img class="navIcon" src="./assets/images/icons/download.png"><p>Resume</p></div></a>
     <div class="navDivider"></div>
     {% for item in site.data.socials %}
-        <img class="navIcon " src="{{ item.src }}">
+        <a class="navLink" href="{{item.url}}"><img class="navIcon " src="{{ item.src }}"></a>
         {% if item.name != "Twitter" %}<div class="navDivider"></div>{% endif %}
     {% endfor %}
 </div>

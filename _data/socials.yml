@@ -1,6 +1,9 @@
 - name: GitHub
   src: ./assets/images/logos/github-mark.svg
+  url: https://github.com/Poke024
 - name: LinkedIn
   src: ./assets/images/logos/linkedin_128.png
+  url: https://www.linkedin.com/in/adair-torres/
 - name: Twitter
   src: ./assets/images/logos/twitter_logo.svg
+  url: https://twitter.com/home

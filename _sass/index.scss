@@ -1,66 +1,144 @@
-.row {
+.tileContainer {
+    align-items: flex-start;
     display: flex;
-    height: 100%;
-}
-
-.row .left {
-    max-width: 70%;
-    width: fit-content;
-}
-
-.row .right {
-    width: calc(30% - 25px);
-    margin: 0 auto;
-}
-
-.sectionBox {
-    display: flex;
-    width: 100%;
-    border-radius: 15px;
-    align-items: center;
+    flex-flow: row wrap;
     justify-content: center;
 }
 
-.wrapper {
-    width: calc(100% - 30px);
-    height: calc(100% - 25px);
-    padding: 10px 15px 15px 15px;
+.tile {
+    border-radius: 15px;
+    margin: 0px 0px 10px 0px;
+    padding: 10px;
 }
 
-#profile {
-    background-color: #457EAC;
-}
-
-#profileInfo h2 {
-    text-align: center;
-    margin: 0px;
-    padding: 0px;
-}
-
-#profileInfo h3 {
-    text-align: center;
-    margin: 0px;
-    padding: 0px;
-}
-
-#profileInfo p {
-    text-align: center;
-    margin: 0px;
-    padding: 0px;
-}
-
-#profilePic {
-    width: 100px;
-    margin: 0 auto;
+.horizontalSpacer {
+    flex-grow: 1;
+    max-width: 10%;
 }
 
 #projects {
-    background-color: #13262F;
-    color: #F7F7FF;
+    background-color: #253031;
+    color: white;
+    display: flex;
+    flex-flow: column wrap;
+    flex-grow: 2;
+    padding: 20px 0 30px 10px;
+    max-width: 1332px;
+    min-width: 332px;
 }
 
-#projectsContainer {
+#projects h1 {
+    margin: 0px 0px 10px 10px;
+    padding: 0px;
+    text-align: left;
+    width: fit-content;
+}
+
+#projects .wrapper {
     display: flex;
-    align-items: center;
+    flex-flow: row wrap;
     justify-content: center;
+    width: 100%;
+}
+
+/* Profile Tile */
+#profile {
+    background-color: #457EAC;
+    display: flex;
+    flex-flow: column nowrap;
+    flex-grow: 2;
+    min-width: 400px;
+    max-width: 25%;
+}
+
+    /* Name & Photo */
+#namePhoto {
+    display: flex;
+    flex-flow: row nowrap;
+    flex-grow: 1;
+    height: 135px;
+    width: 100%;
+}
+
+#namePhoto h2 {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    font-size: 32px;
+    margin: 0px 0px 0px 0px;
+    max-width: 75%;
+    justify-content: center;
+}
+
+#pfp {
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+    width: 20%;
+}
+
+#pfp img {
+    clip-path: rect(5% 25% 50% 75% round 5%);
+    height: 210%;
+    min-width: 175px;
+    position: absolute;
+    right: -25%;
+    top: -10px;
+}
+
+    /* Info Section */
+#profileInfo {
+    background-color: #F7F0F5;
+    border-radius: 5px;
+    margin: 10px 0px 0px 0px;
+    max-width: 100%;
+    padding: 10px;
+}
+
+#profileInfo h3 {
+    margin: 5px 0 5px 0;
+    padding: 0 0 0 5px;
+}
+
+        /* Mail Icon */
+.gg-mail,
+.gg-mail::after {
+    display: block;
+    box-sizing: border-box;
+    height: 14px;
+    border: 2px solid
+}
+.gg-mail {
+    overflow: hidden;
+    transform: scale(var(--ggs,1));
+    position: relative;
+    width: 18px;
+    border-radius: 2px
+}
+.gg-mail::after {
+    content: "";
+    position: absolute;
+    border-radius: 3px;
+    width: 14px;
+    transform: rotate(-45deg);
+    bottom: 3px;
+    left: 0
+}
+
+#profileInfo a {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 0 0 0 10px;
+    width: fit-content;
+}
+
+#profileInfo a p {
+    margin: 0 0 0 10px;
+    padding: 0;
+}
+
+#profileInfo .wrapper {
+    display: flex;
+    flex-flow: row wrap;
 }
