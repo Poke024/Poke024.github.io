@@ -3,15 +3,15 @@ layout: default
 title: Home
 ---
 <div class="tileContainer">
-    <div class="tile" id="projects">
+    <div class="tile liftRight red" id="projects">
         <h1>Current Projects</h1>
         <div class="wrapper">
             {% for item in site.data.projects %}
-                <div class="preview">
+                <div class="preview white">
                     <img src="{{ item.preview }}">
                     <div class="previewInfo">
                         <div class="previewHeader">
-                            <div class="previewHeaderInfo">
+                            <div class="headerText">
                                 <h3>{{ item.name }}</h3>
                                 <p>> {{ item.status }}</p>
                             </div>
@@ -27,11 +27,11 @@ title: Home
         </div>
     </div>
     <div class="horizontalSpacer"></div>
-    <div class="tile" id="profile">
+    <div class="tile liftLeft blue" id="profile">
         <div id="namePhoto">
             <h2>Adair Torres</h2>
             <div id="pfp">
-                <img src="/assets/images/profile.JPG">
+                <img src="/assets/images/pfp_headshot.jpg">
             </div>
         </div>
         <div id="profileInfo">
