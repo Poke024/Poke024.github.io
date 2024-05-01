@@ -1,4 +1,4 @@
-<div class="navBar">
+<div class="navBar yellow">
     {% for item in site.data.navigation %}
         <a class="navLink" id="{{item.name}}" href="{{item.link}}">{{ item.name }}</a>
         {% if item.name != "About" %}<div class="navDivider"></div>{% endif %}
