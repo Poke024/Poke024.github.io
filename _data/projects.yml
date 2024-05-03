@@ -2,7 +2,7 @@
   status: In Development
   summary: A Godot card game project focusing on minimizing RNG mechanics and maximizing player agency over RNG.
   language: Godot
-  preview: 
+  preview: ./assets/images/previews/CardGame1_preview.png
 - name: StrikerSets
   status: In Development
   summary: An Overwolf in-game overlay app that recommends awakenings for the game Omega Strikers.
@@ -13,6 +13,11 @@
   summary: A tabletop role-playing game companion app built on Windows forms.
   language: C#
   preview: ./assets/images/previews/ContinentalEncounters_preview.png
+- name: KUNornir
+  status: Maintainer
+  summary: A Nornir wrapper that applies some extra functionalities to streamline automation of network enterprise changes.
+  language: Python
+  preview: ./assets/images/previews/KUNornir_preview.png
 - name: ML4MC
   status: Complete
   summary: Senior Capstone - Implementing machine learning to complete objectives and tasks in Minecraft.
