@@ -1,7 +1,7 @@
 <div class="navBar yellow">
     {% for item in site.data.navigation %}
         <a class="navLink" id="{{item.name}}" href="{{item.link}}">{{ item.name }}</a>
-        {% if item.name != "About" %}<div class="navDivider"></div>{% endif %}
+        {% if item.name != "Blog" %}<div class="navDivider"></div>{% endif %}
     {% endfor %}
     <div class="navSpacer"></div>
     <a class="navLink" href="assets\files\Adair_Torres_Resume.pdf" download="Adair_Torres_Resume"><div id="resume"><img class="navIcon" src="./assets/images/icons/download.png"><p>Resume</p></div></a>
