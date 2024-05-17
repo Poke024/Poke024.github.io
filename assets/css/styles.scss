@@ -1,5 +1,6 @@
 ---
 ---
+@import "columns";
 @import "effects";
 @import "navbar";
 @import "index";
@@ -9,49 +10,44 @@
     src: url('fonts/RobotoMono-Regular.ttf')
 }
 
+* {
+    box-sizing: border-box;
+}
+
 html {
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
+    max-width: 100%;
+    min-width: 350px;
+    overflow-y: scroll;
+    position: relative;
 }
 
 body {
     background-color: #F7F0F5;
     font-family: "Roboto Mono", monospace;
     margin: 0;
-    min-height: 100%;
-    padding: 0;
 }
 
 main {
-    padding: 60px 5px 0 5px;
+    padding: 40px 5px 5px 5px;
 }
 
-.row {
-    column-gap: 15px;
-    display: flex;
-    flex-flow: row wrap;
-    row-gap: 15px;
+/* Large to Extra Large devices (landscape tablets, laptops, desktops 768px and up) */
+@media only screen and (min-width: 768px) {
+    main {
+        padding: 55px 5px 5px 5px;
+    }
 }
 
-.column {
-    display: flex;
-    flex-flow: column nowrap;
-    row-gap: 15px;
-}
-
-.around {
-    justify-content: space-around;
+.whitespace {
+    background-color: #F7F0F5;
+    border-radius: 5px;
+    color: black;
 }
 
 .tile {
     border-radius: 15px;
-    transition: 0.3s;
-    padding: 15px 20px 20px 20px;
-}
-
-.sizeWrapper {
-    max-width: 100%;
+    padding: 15px;
+    margin: 0 0 5px 0;
 }
 
 h1, h3, p {
@@ -72,4 +68,23 @@ a:hover {
 footer {
     margin: 10px 0 10px 0;
     text-align: center;
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 768px) {
+    footer {
+        float: right;
+        position: absolute;
+        right: 5px;
+        bottom: 28%;
+    }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1252px) {
+    footer {
+        float: none;
+        position: inherit;
+    }
 }
