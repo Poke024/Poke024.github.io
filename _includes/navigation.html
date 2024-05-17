@@ -1,13 +1,46 @@
-<div class="navBar yellow">
-    {% for item in site.data.navigation %}
-        <a class="navLink" id="{{item.name}}" href="{{item.link}}">{{ item.name }}</a>
-        {% if item.name != "Blog" %}<div class="navDivider"></div>{% endif %}
-    {% endfor %}
+<div class="row nav yellow" id="compactNav">
     <div class="navSpacer"></div>
-    <a class="navLink" href="assets\files\Adair_Torres_Resume.pdf" download="Adair_Torres_Resume"><div id="resume"><img class="navIcon" src="./assets/images/icons/download.png"><p>Resume</p></div></a>
-    <div class="navDivider"></div>
-    {% for item in site.data.socials %}
-        <a class="navLink" href="{{item.url}}"><img class="navIcon " src="{{ item.src }}"></a>
-        {% if item.name != "Twitter" %}<div class="navDivider"></div>{% endif %}
-    {% endfor %}
+    <a id="homeIcon" href="/">
+        <i class="fa-solid fa-house-chimney fa-xl" id="home"></i>
+    </a>
+    <div id="panelButton" onclick="toggleMenu(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+</div>
+<div class="row nav yellow" id="wideNav">
+    <div class="navSection" id="pageSection">
+        {% for item in site.data.navigation %}
+            <a class="navLink" href="{{item.link}}">{{ item.name }}</a>
+            {% if item.name != "Blog" %}<div class="navDivider"></div>{% endif %}
+        {% endfor %}
+    </div>
+    <div class="navSpacer"></div>
+    <div class="navSection yellow" id="socialSection">
+        <a class="navLink" href="assets\files\Adair_Torres_Resume.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-download fa-l"></i><p>Resume</p></a>
+        <div class="navDivider"></div>
+        {% for item in site.data.socials %}
+            <a class="navLink" href="{{item.url}}"><i class="{{item.icon}} fa-xl"></i></a>
+            {% if item.name != "Twitter" %}<div class="navDivider"></div>{% endif %}
+        {% endfor %}
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-9 col-s-5 sidebar gray" id="navSidebar">
+        <div class="whitespace">
+            <div id="socialCol">
+                {% for item in site.data.socials %}
+                    <a class="navLink" href="{{item.url}}"><i class="{{item.icon}} fa-xl"></i></a>
+                {% endfor %}
+            </div>
+            <div id="navCol">
+                {% for item in site.data.navigation %}
+                    <a class="navLink" href="{{item.link}}">{{ item.name }}</a>
+                    <div class="navDivider"></div>
+                {% endfor %}
+                <a class="navLink" href="assets\files\Adair_Torres_Resume.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-download fa-l"></i><p>Resume</p></a>
+            </div>
+        </div>
+    </div>
 </div>

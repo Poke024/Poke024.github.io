@@ -1,5 +1,27 @@
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>{{ page.title }}</title>
 <link rel="stylesheet" href="/assets/css/styles.css">
 <link rel="shortcut icon" type="image/x-icon" href="./assets/images/icons/favicon.ico">
+<script src="https://kit.fontawesome.com/d9a61ee927.js" crossorigin="anonymous"></script>
+<script>
+function toggleMenu(x) {
+    x.classList.toggle("change");
+    let sidepanel = document.getElementById("navSidebar");
+    if (x.classList.contains("change")) {
+        sidepanel.style.right = "0px";
+    } else {
+        sidepanel.style.right = "-100%";
+    }
+}
+function setEmail() {
+    var me = 'adair.tor24'
+    var place = 'gmail.com'
+    var email = window.atob('YWRhaXIudG9yMjRAZ21haWwuY29t');
+
+    var elink = document.getElementById('eLink');
+
+    elink.href = `mailto:${me}@${place}`;
+}
+</script>
 {% include head-custom-google-analytics.html %}

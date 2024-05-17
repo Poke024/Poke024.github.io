@@ -1,59 +1,189 @@
-.navBar {
-    align-items: center;
-    border-radius: 25px;
+.nav {
     display: flex;
     flex-flow: row nowrap;
-    font-size: 24px;
-    height: 30px;
-    justify-content: center;
-    margin: 5px 5px 0 5px;
-    padding: 5px 25px 5px 25px;
+    justify-content: space-between;
+    min-width: 350px;
     position: fixed;
-    overflow: hidden;
-    transition: 0.5s;
-    width: calc(100% - 60px);
-    z-index: 10;
+    top: 0;
+    z-index: 2;
 }
 
-.navLink{
-    align-content: center;
-    align-self: flex-start;
+.navLink {
     color: black;
-    cursor: pointer;
-    display: flex;
-    height: 100%;
-    transition: 0.3s;
-}
-
-.navLink p {
-    margin: 0 0 0 5px;
 }
 
 .navLink:hover {
     color: #8B786D;
-    cursor: pointer;
+}
+
+.navLink p {
+    margin: 0 0 0 10px;
 }
 
 .navDivider {
     border-color: black;
     border-style: solid;
-    border-width: 0 1px 0 0;
-    height: 100%;
-    margin: 5px 10px 5px 10px;
-    width: 1px;
 }
 
-.navSpacer {
-    flex-grow: 2;
+/* Extra small to Medium devices (phones, tablets 768px and down) */
+@media only screen and (max-width: 767px) {
+    #compactNav {
+        height: 35px;
+    }
+
+    #wideNav {
+        display: none;
+    }
+
+    .navSpacer {
+        height: 100%;
+        width: 30px;
+    }
+
+    #homeIcon {
+        align-items: center;
+        color: black;
+        display: flex;
+        justify-content: center;
+        margin: 0 0 0 10px;
+    }
+
+    /* 3-bar Menu */
+    #panelButton {
+        cursor: pointer;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-evenly;
+        margin: 0 10px 0 0;
+    }
+    .bar1, .bar2, .bar3 {
+        background-color: #333;
+        height: 3px;
+        transition: 0.4s;
+        width: 30px;
+    }
+    .change .bar1 { transform: translate(0, 9.5px) rotate(-45deg); }
+    .change .bar2 { opacity: 0; }
+    .change .bar3 { transform: translate(0, -9.5px) rotate(45deg); }
+    
+    #navSidebar {
+        align-items: center;
+        border-radius: 15px 0 0 15px;
+        display: flex;
+        flex-flow: column nowrap;
+        font-size: 32px;
+        overflow-x: hidden;
+        padding: 15px;
+        position: fixed;
+        right: -100%;
+        top: 35px;
+        transition: 1s;
+        z-index: 1;
+    }
+
+    #navSidebar .whitespace {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding: 10px 5px 10px 5px;
+        width: 100%;
+    }
+
+    #socialCol {
+        align-items: center;
+        display: flex;
+        flex: 2;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+    }
+
+    #navCol {
+        align-items: flex-end;
+        display: flex;
+        flex-flow: column;
+        justify-content: right;
+        margin: 0 5px 0 0;
+    }
+
+    .navLink {
+        align-items: center;
+        display: flex;
+        flex-flow: row nowrap;
+        width: fit-content;
+    }
+
+    .navDivider {
+        border-width: 1px 0 0 0;
+        height: 1px;
+        margin: 4px 0 4px 0;
+        width: 100%;
+    }
 }
 
-#resume {
-    align-items: center;
-    cursor: pointer;
-    display: flex;
-}
+/* Large to Extra Large devices (landscape tablets, laptops, desktops 768px and up) */
+@media only screen and (min-width: 768px) {
+    #compactNav {
+        display: none;
+    }
 
-.navIcon {
-    align-self: flex-end;
-    height: 30px;
+    #wideNav {
+        align-items: center;
+        border-radius: 25px;
+        font-size: 24px;
+        height: 45px;
+        margin: 5px;
+        overflow: hidden;
+        padding: 5px 25px 5px 25px;
+        width: calc(100% - 10px);
+    }
+    
+    #navSidebar {
+        display: none;
+    }
+
+    .navSection {
+        display: flex;
+        height: 100%;
+        flex-flow: row nowrap;
+    }
+
+    #pageSection {
+        justify-content: flex-start;
+    }
+
+    #socialSection {
+        justify-content: flex-end;
+    }
+    
+    .navLink{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        transition: 0.3s;
+    }
+
+    .navLink:hover {
+        color: #8B786D;
+    }
+
+    .navDivider {
+        border-width: 0 1px 0 0;
+        margin: 5px 10px 5px 10px;
+        width: 1px;
+    }
+
+    .navSpacer {
+        flex-grow: 2;
+    }
+
+    #resume {
+        align-items: center;
+        display: flex;
+    }
+
+    .navIcon {
+        align-self: flex-end;
+        height: 30px;
+    }
 }
