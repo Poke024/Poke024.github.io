@@ -1,12 +1,11 @@
 
-/* Large to Extra Large devices (landscape tablets, laptops, desktops 768px and up) */
+/* Large devices (landscape tablets, laptops 768px and up) */
 @media only screen and (min-width: 768px) {
     #intro {
         float: right;
         clear: both;
     }
 
-    
     #intro .whitespace p {
         font-size: 18px;
     }
@@ -17,7 +16,7 @@
     }
 }
 
-/* Large to Extra Large devices (landscape tablets, laptops, desktops 768px and up) */
+/* Extra Large devices (laptops, desktops 1252px and up) */
 @media only screen and (min-width: 1252px) {
     #intro {
         float: none;
@@ -44,11 +43,11 @@
 
 /* Intro Tile */
 #intro p {
-    font-size: 15px;
     margin: 10px 0 0 0;
     padding: 5px;
 }
 
+/* Info Tile */
     /* Name & Photo */
 #namePhoto {
     display: flex;
@@ -82,9 +81,6 @@
 
     /* Info Section */
 #profileInfo {
-    background-color: #F7F0F5;
-    border-radius: 5px;
-    color: black;
     display: flex;
     flex-flow: column nowrap;
     margin: 10px 0 0 0;
@@ -120,10 +116,13 @@
     padding: 0 0 0 10px;
 }
 
+#education p {
+    width: 100%;
+}
+
 /* Projects Tile */
 #projects {
     animation-delay: 0.8s;
-    max-width: 1250px;
 }
 
     /* Preview Boxes */

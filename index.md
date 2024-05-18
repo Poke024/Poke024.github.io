@@ -14,19 +14,19 @@ title: Home
     <div class="col-xs-12 col-m-5h col-xl-4" id="profileContainer">
         <div class="tile blue" id="profile">
             <div id="namePhoto">
-                <h2>About Me</h2>
+                <h2><a>About Me</a></h2>
                 <div id="pfp">
                     <img src="/assets/images/pfp_headshot.jpg">
                 </div>
             </div>
-            <div id="profileInfo">
+            <div class="whitespace" id="profileInfo">
                 <h3><u>Contact</u></h3>
                     <a id="eLink" href="#" onclick="setEmail()"><i class="fa-regular fa-envelope fa-lg"></i><p>Email Me</p></a>
                 <h3><u>Education</u></h3>
                 <div class="wrapper" id="education">
                     <p><b>University of Kansas</b></p>
-                    <p><i>B.S. in Computer Science, Expected May 2024</i></p>
-                    <p>GPA: 3.83 | Organizations: ACM@KU, Upsilon Pi Epsilon</p>
+                    <p><i>B.S. in Computer Science, May 2024</i></p>
+                    <p>GPA: 3.82 | Organizations: ACM@KU, Upsilon Pi Epsilon</p>
                 </div>
                 <h3><u>Interests</u></h3>
                 <div class="wrapper">
@@ -62,11 +62,11 @@ title: Home
         </div>
     </div>
     <div class="col-xs-12 col-m-6 col-xl-7h tile red" id="projects">
-        <h1>Current Projects</h1>
+        <h1><a>Current Projects</a></h1>
         <div id="previews">
             {% for item in site.data.projects %}
                 <div class="preview white">
-                    <img src="{{ item.preview }}">
+                    <a><img src="{{ item.preview }}"></a>
                     <div class="previewInfo">
                         <div class="previewHeader">
                             <div class="headerText">
