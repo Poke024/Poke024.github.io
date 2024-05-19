@@ -1,6 +1,7 @@
 ---
 ---
 @import "columns";
+@import "gallery";
 @import "effects";
 @import "navbar";
 @import "index";
@@ -17,7 +18,6 @@
 html {
     max-width: 100%;
     min-width: 350px;
-    overflow-y: scroll;
     position: relative;
 }
 
@@ -66,7 +66,7 @@ a:hover {
 }
 
 footer {
-    margin: 10px 0 10px 0;
+    margin: 0;
     text-align: center;
 }
 

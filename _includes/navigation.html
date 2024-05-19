@@ -11,7 +11,7 @@
 </div>
 <div class="row nav yellow" id="wideNav">
     <div class="navSection" id="pageSection">
-        {% for item in site.data.navigation %}
+        {% for item in site.data.navigation.pages %}
             <a class="navLink" href="{{item.link}}">{{ item.name }}</a>
             {% if item.name != "Blog" %}<div class="navDivider"></div>{% endif %}
         {% endfor %}
@@ -20,7 +20,7 @@
     <div class="navSection yellow" id="socialSection">
         <a class="navLink" href="assets\files\Adair_Torres_Resume.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-download fa-l"></i><p>Resume</p></a>
         <div class="navDivider"></div>
-        {% for item in site.data.socials %}
+        {% for item in site.data.navigation.socials %}
             <a class="navLink" href="{{item.url}}"><i class="{{item.icon}} fa-xl"></i></a>
             {% if item.name != "Twitter" %}<div class="navDivider"></div>{% endif %}
         {% endfor %}
@@ -30,12 +30,12 @@
     <div class="col-xs-9 col-s-5 sidebar gray" id="navSidebar">
         <div class="whitespace">
             <div id="socialCol">
-                {% for item in site.data.socials %}
+                {% for item in site.data.navigation.socials %}
                     <a class="navLink" href="{{item.url}}"><i class="{{item.icon}} fa-xl"></i></a>
                 {% endfor %}
             </div>
             <div id="navCol">
-                {% for item in site.data.navigation %}
+                {% for item in site.data.navigation.pages %}
                     <a class="navLink" href="{{item.link}}">{{ item.name }}</a>
                     <div class="navDivider"></div>
                 {% endfor %}

@@ -125,57 +125,6 @@
     animation-delay: 0.8s;
 }
 
-    /* Preview Boxes */
-#previews {
-    display: flex;
-    flex-flow: row wrap;
-    column-gap: 10px;
-    justify-content: space-evenly;
-    margin: 15px 0 0 0;
-    row-gap: 10px;
-}
-
-.preview {
-    border-radius: 5px;
-    max-height: 312px;
-    max-width: 368px;
-    padding: 5px;
-    transition: 0.3s;
-}
-
-@media only screen and (max-width: 620px) {
-    .preview {
-        width: 100%;
-    }
-}
-
-.preview img {
-    border-color: darkgray;
-    border-width: 1px;
-    border-style: solid;
-    height: 180px;
-    padding: 5px;
-    width: 100%;
-}
-
-.previewInfo {
-    padding: 0 5px 0 5px;
-}
-
-.previewHeader {
-    display: flex;
-    flex-flow: row nowrap;
-}
-
-.headerText {
-    width: fit-content;
-}
-
-.language {
-    float: right;
-    margin: 0 0 auto auto;
-}
-
 /* Status Tile */
 #status {
     align-items: center;
