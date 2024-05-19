@@ -28,36 +28,20 @@ title: Home
                     <p><i>B.S. in Computer Science, May 2024</i></p>
                     <p>GPA: 3.82 | Organizations: ACM@KU, Upsilon Pi Epsilon</p>
                 </div>
-                <h3><u>Interests</u></h3>
-                <div class="wrapper">
-                    {% for item in site.data.interests %}
-                        <p class="bubble info gray">{{item.text}}</p>
-                    {% endfor %}
-                </div>
-                <h3><u>Technical Skills</u></h3>
-                <div class="wrapper">
-                    {% for item in site.data.technical %}
-                        <p class="bubble info yellow">{{item.text}}</p>
-                    {% endfor %}
-                </div>
-                <h3><u>Soft Skills</u></h3>
-                <div class="wrapper">
-                    {% for item in site.data.soft %}
-                        <p class="bubble info gray">{{item.text}}</p>
-                    {% endfor %}
-                </div>
-                <h3><u>Hobbies</u></h3>
-                <div class="wrapper">
-                    {% for item in site.data.hobbies %}
-                        <p class="bubble info yellow">{{item.text}}</p>
-                    {% endfor %}
-                </div>
+                {% for category in site.data.bubbles %}
+                    <h3><u>{{ category.header }}</u></h3>
+                    <div class="wrapper">
+                        {% for item in category.items %}
+                            <p class="bubble info {{ category.color }}">{{item.text}}</p>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
             </div>
         </div>
         <div class="tile gray" id="status">
             <h1>Currently:</h1>
             <div class="whitespace">
-                <p>Surviving Finals Week</p>
+                <p>Job Hunting</p>
             </div>
         </div>
     </div>

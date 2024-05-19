@@ -1,0 +1,54 @@
+- interests:
+  header: Interests
+  color: gray
+  items:
+    - text: Game Development
+    - text: UI/UX Design
+    - text: Web Services
+    - text: Cybersecurity
+    - text: Frontend
+    - text: Full Stack
+
+- technical:
+  header: Technical Skills
+  color: yellow
+  items:
+    - text: Python
+    - text: C++
+    - text: Godot
+    - text: JavaScript
+    - text: Flask
+    - text: C#
+    - text: .NET
+    - text: PHP
+    - text: SQL
+    - text: APIs
+    - text: Algorithms
+    - text: Data Structures
+    - text: Multiprocessing
+
+- soft:
+  header: Soft Skills
+  color: gray
+  items:
+  - text: Communication
+  - text: Organization
+  - text: Self-Management
+  - text: Technical Writing
+  - text: Data Analysis
+  - text: Teamwork
+  - text: Attention to Detail
+  - text: Problem Solving
+  - text: Spanish
+
+- hobbies:
+  header: Hobbies
+  color: yellow
+  items:
+    - text: Leatherworking
+    - text: Video Games
+    - text: Music
+    - text: Digital Art
+    - text: Board Games
+    - text: TTRPGs
+    - text: TCGs
