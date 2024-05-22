@@ -29,6 +29,23 @@ url: https://poke024.github.io # the base hostname & protocol for your site, e.g
 twitter_username: Poke0240
 github_username:  Poke024
 
+defaults:
+  - scope:
+      path: "assets/images"
+    values:
+      image: true
+  - scope:
+      path: "assets/images/posts/devweek"
+    values:
+      devweek: true
+  - scope:
+      path: "assets/images/posts/scc23"
+    values:
+      scc23: true
+
+collections:
+  projects:
+    output: true
 # Build settings
 # remote_theme: pages-themes/cayman@v0.2.0
 # plugins:

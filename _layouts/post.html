@@ -1,7 +1,22 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
-<p>{{ page.date | date_to_string }} - {{ page.author }}</p>
-
-{{ content }}
+<div class="tile blue">
+    <h1>{{ page.heading }}</h1>
+    <p>{{ page.date | date_to_string }}</p>
+    {{ content }}
+</div>
+<div class="tile gray">
+    <h1>Gallery</h1>
+    <div class="gallery">
+        {% assign image_files = site.static_files | where: page.shorthand, true %}
+        {% for img in image_files %}
+        <div class="photo">
+            <a href="{{ img.path }}" target="_blank" rel="noopener noreferrer">
+                <img src="{{ img.path }}">
+            </a>
+            <div class="attrib">Sample Attribution</div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

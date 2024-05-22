@@ -49,13 +49,13 @@
 
 /* Info Tile */
     /* Name & Photo */
-#namePhoto {
+#header {
     display: flex;
     flex-flow: row nowrap;
     height: 135px;
 }
 
-#namePhoto h2 {
+#header h2 {
     align-items: center;
     display: flex;
     flex-grow: 1;
@@ -87,7 +87,7 @@
     padding: 10px;
 }
 
-#profileInfo h3 {
+#profileInfo h2 {
     margin: 5px 0 5px 0;
     padding: 0 0 0 5px;
 }
