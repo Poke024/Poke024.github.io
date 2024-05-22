@@ -1,0 +1,18 @@
+
+<div class="gallery">
+    {% for project in to_display %}
+    <div class="preview white">
+        <a href="{{ project.url }}"><img src="assets/images/projects/{{ project.pathname }}/{{ project.pathname }}_preview.png"></a>
+        <div class="previewInfo">
+            <div class="previewHeader">
+                <div class="headerText">
+                    <a href="{{ project.url }}" style="color: black" ><h3>{{ project.name }}</h3></a>
+                    <p>> {{ project.status }}</p>
+                </div>
+                <p class="bubble language yellow">{{ project.language }}</p>
+            </div>
+            <p>{{ project.summary }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>

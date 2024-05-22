@@ -13,10 +13,10 @@ title: Home
     </div>
     <div class="col-xs-12 col-m-5h col-xl-4" id="profileContainer">
         <div class="tile blue" id="profile">
-            <div id="namePhoto">
-                <h2><a>About Me</a></h2>
+            <div id="header">
+                <h2><a class="link-white">About Me</a></h2>
                 <div id="pfp">
-                    <img src="/assets/images/pfp_headshot.jpg">
+                    <img src="/assets/images/index/portrait_headshot.jpg">
                 </div>
             </div>
             <div class="whitespace" id="profileInfo">
@@ -29,11 +29,13 @@ title: Home
                     <p>GPA: 3.82 | Organizations: ACM@KU, Upsilon Pi Epsilon</p>
                 </div>
                 {% for category in site.data.bubbles %}
-                    <h3><u>{{ category.header }}</u></h3>
-                    <div class="wrapper">
-                        {% for item in category.items %}
-                            <p class="bubble info {{ category.color }}">{{item.text}}</p>
-                        {% endfor %}
+                    <div class="bubbleset">
+                        <h3><u>{{ category.header }}</u></h3>
+                        <div class="wrapper">
+                            {% for item in category.items %}
+                                <p class="bubble info {{ category.color }}">{{ item.text }}</p>
+                            {% endfor %}
+                        </div>
                     </div>
                 {% endfor %}
             </div>
@@ -41,28 +43,13 @@ title: Home
         <div class="tile gray" id="status">
             <h1>Currently:</h1>
             <div class="whitespace">
-                <p>Job Hunting</p>
+                <a><p>Job Hunting</p></a>
             </div>
         </div>
     </div>
     <div class="col-xs-12 col-m-6 col-xl-7h tile red" id="projects">
         <h1><a>Current Projects</a></h1>
-        <div id="previews">
-            {% for item in site.data.projects %}
-                <div class="preview white">
-                    <a><img src="{{ item.preview }}"></a>
-                    <div class="previewInfo">
-                        <div class="previewHeader">
-                            <div class="headerText">
-                                <a><h3>{{ item.name }}</h3></a>
-                                <p>> {{ item.status }}</p>
-                            </div>
-                            <p class="bubble language yellow">{{ item.language }}</p>
-                        </div>
-                        <p>{{ item.summary }}</p>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
+        {% assign to_display = site.projects | where: "featured", true %}
+        {% include previews.html %}
     </div>
 </div>

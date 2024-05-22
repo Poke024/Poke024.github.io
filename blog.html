@@ -4,8 +4,10 @@ color: gray
 title: Blog
 ---
 {% for post in site.posts %}
-<div>
-    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-    {{ post.excerpt }}
+<div class="preview blog blue">
+    <h2><a href="{{ post.url }}">{{ post.heading }}</a></h2>
+    <div class="whitespace">
+        {{ post.excerpt }}
+    </div>
 </div>
 {% endfor %}

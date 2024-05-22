@@ -7,28 +7,49 @@
     row-gap: 10px;
 }
 
-/* Preview Boxes */
-#previews {
-    display: flex;
-    flex-flow: row wrap;
-    column-gap: 10px;
-    justify-content: space-evenly;
-    margin: 15px 0 0 0;
-    row-gap: 10px;
+.gallery img {
+    max-height: 150px;
 }
 
+.photo {
+    background-color: #F7F0F5;
+    border: #ccc 1px solid;
+    color: black;
+    text-align: center;
+}
+
+.photo:hover {
+    border: black 1px solid;
+}
+
+/* Preview Boxes */
 .preview {
+    display: flex;
+    flex-flow: column nowrap;
     border-radius: 5px;
-    max-height: 312px;
-    max-width: 368px;
+    max-width: 350px;
+    min-width: 310px;
     padding: 5px;
-    transition: 0.3s;
 }
 
 @media only screen and (max-width: 620px) {
     .preview {
         width: 100%;
     }
+}
+
+.blog {
+    min-height: 150px;
+}
+
+.blog h2 {
+    margin: 5px 10px 10px 0;
+    padding: 0 50px 0 0;
+}
+
+.preview .whitespace {
+    margin: 0 0 0 0;
+    flex-grow: 2;
 }
 
 .preview img {
