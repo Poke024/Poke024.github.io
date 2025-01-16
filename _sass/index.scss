@@ -1,145 +1,35 @@
 
 /* Large devices (landscape tablets, laptops 768px and up) */
 @media only screen and (min-width: 768px) {
-    #intro {
-        float: right;
-        clear: both;
-    }
+    // #intro {
+    //     float: right;
+    //     clear: both;
+    // }
 
-    #intro .whitespace p {
-        font-size: 18px;
-    }
+    // #intro .whitespace p {
+    //     font-size: 18px;
+    // }
 
-    #profileContainer {
-        float: right;
-        clear: both;
-    }
+    // #profileContainer {
+    //     float: right;
+    //     clear: both;
+    // }
 }
 
 /* Extra Large devices (laptops, desktops 1252px and up) */
 @media only screen and (min-width: 1252px) {
-    #intro {
-        float: none;
-    }
+    // #intro {
+    //     float: none;
+    // }
 
-    #intro .whitespace p {
-        font-size: 20px;
-    }
+    // #intro .whitespace p {
+    //     font-size: 20px;
+    // }
 
-    #profileContainer {
-        float: right;
-        position: absolute;
-        top: 55px;
-        right: 5px;
-    }
-}
-
-/* Bubbles */
-.bubble {
-    border-radius: 25px;
-    padding: 5px 7px 5px 7px;
-    width: fit-content;
-}
-
-/* Intro Tile */
-#intro p {
-    margin: 10px 0 0 0;
-    padding: 5px;
-}
-
-/* Info Tile */
-    /* Name & Photo */
-#header {
-    display: flex;
-    flex-flow: row nowrap;
-    height: 135px;
-}
-
-#header h2 {
-    align-items: center;
-    display: flex;
-    flex-grow: 1;
-    font-size: 32px;
-    margin: 0px 0px 0px 0px;
-    max-width: 75%;
-    justify-content: center;
-}
-
-#pfp {
-    display: flex;
-    justify-content: center;
-    flex-grow: 1;
-    overflow: hidden;
-    position: relative;
-    width: 20%;
-}
-
-#pfp img {
-    border-radius: 10px;
-    height: 100%;
-}
-
-    /* Info Section */
-#profileInfo {
-    display: flex;
-    flex-flow: column nowrap;
-    margin: 10px 0 0 0;
-    padding: 10px;
-}
-
-#profileInfo h2 {
-    margin: 5px 0 5px 0;
-    padding: 0 0 0 5px;
-}
-
-#eLink {
-    align-items: center;
-    color: #0000EE;
-    display: flex;
-    flex-flow: row nowrap;
-    padding: 0 0 0 10px;
-    width: fit-content;
-}
-
-#profileInfo a p {
-    margin: 0 0 0 10px;
-}
-
-#profileInfo .wrapper {
-    display: flex;
-    flex-flow: row wrap;
-    row-gap: 5px;
-    column-gap: 5px;
-}
-
-#education {
-    padding: 0 0 0 10px;
-}
-
-#education p {
-    width: 100%;
-}
-
-/* Projects Tile */
-#projects {
-    animation-delay: 0.8s;
-}
-
-/* Status Tile */
-#status {
-    align-items: center;
-    display: flex;
-    flex-flow: row nowrap;
-}
-
-#status .whitespace {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    padding: 5px;
-    width: 100%;
-}
-
-#status .whitespace p {
-    text-align: center;
+    // #profileContainer {
+    //     float: right;
+    //     position: absolute;
+    //     top: 55px;
+    //     right: 5px;
+    // }
 }

@@ -34,14 +34,14 @@ defaults:
       path: "assets/images"
     values:
       image: true
-  - scope:
-      path: "assets/images/posts/devweek"
-    values:
-      devweek: true
-  - scope:
-      path: "assets/images/posts/scc23"
-    values:
-      scc23: true
+  # - scope:
+  #     path: "assets/images/posts/devweek"
+  #   values:
+  #     devweek: true
+  # - scope:
+  #     path: "assets/images/posts/scc23"
+  #   values:
+  #     scc23: true
 
 collections:
   projects:

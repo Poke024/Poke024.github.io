@@ -1,3 +1,14 @@
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .col-xs-1 {width: 8.33%;}
@@ -37,7 +48,6 @@
     .col-m-3 {width: 25%;}
     .col-m-4 {width: 33.33%;}
     .col-m-5 {width: 41.66%;}
-    .col-m-5h {width: 45.83%;}
     .col-m-6 {width: 50%;}
     .col-m-7 {width: 58.33%;}
     .col-m-8 {width: 66.66%;}
@@ -72,14 +82,9 @@
     .col-xl-5 {width: 41.66%;}
     .col-xl-6 {width: 50%;}
     .col-xl-7 {width: 58.33%;}
-    .col-xl-7h {width: 62.49%;}
     .col-xl-8 {width: 66.66%;}
     .col-xl-9 {width: 75%;}
     .col-xl-10 {width: 83.33%;}
     .col-xl-11 {width: 91.66%;}
     .col-xl-12 {width: 100%;}
-}
-
-.row {
-    width: 100%;
 }

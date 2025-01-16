@@ -1,89 +1,82 @@
 ---
 ---
-@import "columns";
-@import "gallery";
-@import "effects";
-@import "navbar";
+@import "responsive";
 @import "index";
-
-@font-face {
-    font-family: 'Roboto Mono', monospace;
-    src: url('fonts/RobotoMono-Regular.ttf')
-}
 
 * {
     box-sizing: border-box;
 }
 
-html {
-    max-width: 100%;
-    min-width: 350px;
-    position: relative;
-}
-
 body {
-    background-color: #F7F0F5;
-    font-family: "Roboto Mono", monospace;
-    margin: 0;
+    background-color: #191818;
 }
 
 main {
-    padding: 40px 5px 5px 5px;
-}
-
-/* Large to Extra Large devices (landscape tablets, laptops, desktops 768px and up) */
-@media only screen and (min-width: 768px) {
-    main {
-        padding: 55px 5px 5px 5px;
-    }
-}
-
-.whitespace {
-    background-color: #F7F0F5;
+    background-color: #262322;
     border-radius: 5px;
-    color: black;
+
+    position: absolute;
+
+    width: 93%;
+    height: calc(100% - 7vw);
+
+    top: 3.5vw;
+    left: 3.5vw;
 }
 
-.tile {
-    border-radius: 15px;
-    padding: 15px;
-    margin: 0 0 5px 0;
+.top-corner, .bottom-corner, .background {
+    position: absolute;
 }
 
-h1, h2, h3, h4, h5, h6, p {
-    margin: 0;
-    padding: 0;
-    width: fit-content;
+.top-corner, .bottom-corner {   
+
+    width: 10vw;
+    height: 10vw;
 }
 
-a {
-    text-decoration: none;
+.top-corner {
+    border-top: 2.5vw solid #CED3DC;
+    border-right: 2.5vw solid transparent;
+    border-bottom: 2.5vw solid transparent;
+    border-left: 2.5vw solid #CED3DC;
+
+    top: 1vw;
+    left: 1vw;
 }
 
-a:hover {
-    cursor: pointer;
+.bottom-corner {
+    border-top: 2.5vw solid transparent;
+    border-right: 2.5vw solid #CED3DC;
+    border-bottom: 2.5vw solid #CED3DC;
+    border-left: 2.5vw solid transparent;
+    
+    bottom: 1vw;
+    right: 1vw;
 }
 
-footer {
-    margin: 0;
-    text-align: center;
+.background {
+    position: absolute;
+    background-color: #262322;
+    border: solid #FFD23F;
+    border-width: 0.5vh 0 0.5vh;
 }
 
-/* Large devices (landscape tablets and laptops, 768 and up) */
+/* XS and SmallMedium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .background {
+        left: 1.5%;
+        top: 4%;
+        width: 97vw;
+        height: 92%;
+    }
+} 
+
+/* Medium, Large, and XL devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    footer {
-        float: right;
-        position: absolute;
-        right: 5px;
-        bottom: 28%;
+    .background {
+        left: 1.5vw;
+        top: 4%;
+        width: 97vw;
+        height: 92%;
     }
-}
-
-
-/* Extra large devices (large laptops and desktops, 1252px and up) */
-@media only screen and (min-width: 1252px) {
-    footer {
-        float: none;
-        position: inherit;
-    }
-}
+} 
