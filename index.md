@@ -2,8 +2,8 @@
 layout: default
 title: Home
 ---
-<div id=first class="half layer1">
-    <div id=intro class=layer2>
+<div id=first class="section layer1">
+    <div id=intro class="content layer2">
         <div id=logo class=layer3>
         </div>
         <div id=greet class=layer3>
@@ -15,10 +15,44 @@ title: Home
             <p id=position class=layer4></p>
         </div>
     </div>
-    <div id=pages class=layer2>
+    <div id=pages class="links layer2">
         <h2 class="pagelink layer3"></h2>
         <h2 class="pagelink layer3"></h2>
     </div>
 </div>
-<div id=second class="half layer1">
+<div id=second class="section layer1">
+    <div id=projects class="content layer2">
+        <div class="project layer3">
+            <div class="preview layer4">
+            </div>
+            <div class="title layer4">
+            </div>
+        </div>
+        <div class="project layer3">
+            <div class="preview layer4">
+            </div>
+            <div class="title layer4">
+            </div>
+        </div>
+        <div class="project layer3">
+            <div class="preview layer4">
+            </div>
+            <div class="title layer4">
+            </div>
+        </div>
+        <div class="project layer3">
+            <div class="preview layer4">
+            </div>
+            <div class="title layer4">
+            </div>
+        </div>
+        <div id=morelink class="layer3">
+            <div id=more class="layer4">
+            </div>
+        </div>
+    </div>
+    <div id=socials class="links layer2">
+        <h2 class="pagelink layer3"></h2>
+        <h2 class="pagelink layer3"></h2>
+    </div>
 </div>
