@@ -1,14 +1,13 @@
 ---
 ---
-@import "responsive";
-@import "index";
+@use "../_sass/dev-layers";
+@use "../_sass/frame";
 
 * {
     box-sizing: border-box;
 }
 
 body {
-    background-color: #191818;
     overflow: hidden;
 }
 
@@ -18,69 +17,15 @@ main {
     display: flex;
 }
 
-.top-corner, .bottom-corner, .background {
-    position: absolute;
-}
-
-.top-corner, .bottom-corner {   
-    border-radius: 10px 0;
-
-    width: 10vw;
-    height: 10vw;
-}
-
-.top-corner {
-    border-top: 2.5vw solid #CED3DC;
-    border-right: 2.5vw solid transparent;
-    border-bottom: 2.5vw solid transparent;
-    border-left: 2.5vw solid #CED3DC;
-
-    top: 2vh;
-    left: 1vw;
-}
-
-.bottom-corner {
-    border-top: 2.5vw solid transparent;
-    border-right: 2.5vw solid #CED3DC;
-    border-bottom: 2.5vw solid #CED3DC;
-    border-left: 2.5vw solid transparent;
-    
-    bottom: 2vh;
-    right: 1vw;
-}
-
-.background {
-    position: absolute;
-    background-color: #262322;
-    border: solid #FFD23F;
-    border-width: 1vh 0 1vh 0;
-}
-
 .half {
     display: flex;
     flex-direction: column;
-}
-
-.layer1 {
-    border: 1px solid orange;
-}
-
-.layer2 {
-    border: 1px solid blue;
-}
-
-.layer3 {
-    border: 1px solid purple;
 }
 
 #bio {
     display: flex;
     flex-flow: column;
     justify-content: center;
-}
-
-.layer4 {
-    border: 1px solid green;
 }
 
 .pagelink {

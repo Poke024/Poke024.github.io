@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Home
+sheet: home
 ---
 <div id=first class="section layer1">
     <div id=intro class="content layer2">

@@ -1,0 +1,19 @@
+@use "../_sass/_colors";
+
+body {
+    background-color: #{$pageColor};
+}
+
+.background {
+    background-color: $basePrimary;
+    border-color: $textPrimary;
+}
+
+[class*="corner-top"] { border-top-color: $textSecondary; }
+
+[class*="corner-bot"] { border-bottom-color: $textSecondary; }
+
+.corner-top-l { border-left-color: $textSecondary; }
+.corner-top-r { border-right-color: $textSecondary; }
+.corner-bot-l { border-left-color: $textSecondary; }
+.corner-bot-r { border-right-color: $textSecondary; }
