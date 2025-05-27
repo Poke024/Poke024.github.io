@@ -1,7 +1,9 @@
 ---
 ---
 @use "colors";
+@use "fonts";
 
+// Page Colors
 body {
     background-color: #{colors.$pageColor};
 }
@@ -11,32 +13,102 @@ body {
     border-color: #{colors.$textPrimary};
 }
 
-[class*="corner-top"] { border-top-color: #{colors.$textSecondary}; }
+.corner-top-l {
+    border-top-color: #{colors.$textSecondary};
+    border-left-color: #{colors.$textSecondary};
+}
 
-[class*="corner-bot"] { border-bottom-color: #{colors.$textSecondary}; }
+.corner-bot-r {
+    border-right-color: #{colors.$textSecondary};
+    border-bottom-color: #{colors.$textSecondary};
+}
 
-.corner-top-l { border-left-color: #{colors.$textSecondary}; }
-.corner-top-r { border-right-color: #{colors.$textSecondary}; }
-.corner-bot-l { border-left-color: #{colors.$textSecondary}; }
-.corner-bot-r { border-right-color: #{colors.$textSecondary}; }
+// Layout
 
 .half {
     display: flex;
     flex-direction: column;
 }
 
+#greet {
+    font-family: "Jersey 25";
+
+    h1 {
+        color: #{colors.$textPrimary};
+    }
+    h3 {
+        color: #{colors.$textSecondary};
+    }
+}
+
 #bio {
     display: flex;
     flex-flow: column;
     justify-content: center;
+    font-size: 36px;
+    text-align: center;
+    font-family: "Roboto";
+
+    #selfdesc {
+        color: #{colors.$textSecondary};
+    }
+    #position {
+        color: #{colors.$textPrimary};
+    }
 }
 
-.pagelink {
+.links {
+    width: 100%;
+    height: 12.5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+[class*="link-"] {
+    display: flex;
+    justify-content: center;
     height: 100%;
     width: 50%;
+    align-items: center;
 
-    margin: 0;
-    padding: 0;
+    h2 {
+        font-family: "Jersey 25";
+        text-transform: uppercase;
+        font-size: 64px;
+        height: 100%;
+        width: fit-content;
+        align-content: center;
+    }
+
+    div {
+        height: fit-content;
+        min-width: 2vh;
+        width: fit-content;
+    }
+}
+
+.link-external {
+    color: #{colors.$textPrimary};
+    column-gap: 1%;
+
+    div {
+        margin-bottom: 20px;
+    }
+}
+
+.link-nav {
+    color: #{colors.$textSecondary};
+    column-gap: 2.5%;
+}
+
+.project {
+    background-color: #{colors.$baseSecondary};
+    color: #{colors.$textPrimary};
+}
+
+#morelink {
+    background-color: #{colors.$baseSecondary};
+    color: #{colors.$textPrimary};
 }
 
 /* XS and SmallMedium devices (phones to portrait tablets, 768px and up) */
@@ -87,6 +159,16 @@ body {
         #logo {
             width: 22%;
             height: 28%;
+
+            > div {
+                height: 100%;
+                padding: 10px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
         }
     
         #greet {
@@ -98,16 +180,18 @@ body {
     
             :is(h1, h3) {
                 width: 100%;
-                padding: 0;
                 margin: 0;
+                padding: 0;
             }
     
             #hey {
                 height: 28%;
+                font-size: 64px;
             }
         
             #name {
                 height: 58%;
+                font-size: 124px;
             }
         }
     
@@ -133,6 +217,7 @@ body {
     #projects {
         justify-content: space-evenly;
         align-content: space-around;
+        font-family: "Jersey 25";
 
         > .project {
             padding: 5px;
@@ -143,11 +228,15 @@ body {
             flex-direction: column;
 
             .preview {
+                background-color: #{colors.$basePrimaryLight};
                 height: 80%;
             }
 
             .title {
+                font-size: 40px;
                 height: 20%;
+                margin: 0;
+                text-align: center;
             }
         }
 
@@ -156,15 +245,12 @@ body {
             height: 10%;
 
             #more {
+                margin: 0 0 0 0;
+                font-size: 36px;
                 height: 100%;
+                text-align: center;
+                align-content: center;
             }
         }
-    }
-    
-    .links {
-        width: 100%;
-        height: 12.5%;
-        display: flex;
-        justify-content: space-between;
     }
 } 
