@@ -1,6 +1,6 @@
 ---
 ---
-@use "dev-layers";
+// @use "dev-layers";
 @use "corners";
 
 * {
@@ -11,8 +11,14 @@ body {
     overflow: hidden;
 }
 
+.background {
+    position: absolute;
+    
+    border-style: solid;
+    border-width: 1vh 0 1vh 0;
+}
+
 main {
     position: absolute;
-    border: 1px solid red;
     display: flex;
 }

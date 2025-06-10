@@ -11,31 +11,30 @@ sheet: home
             </div>
         </div>
         <div id=greet class=layer3>
-            <h3 id=hey class=layer4>Hey! I'm</h3>
+            <p id=hey class=layer4>Hey! I'm</p>
             <h1 id=name class=layer4>Adair Torres</h1>
         </div>
         <div id=bio class=layer3>
-            <p id=selfdesc class=layer4>I'm a developer with a passion for software, accessibility,<br>and game development.</p>
+            <p id=selfdesc class=layer4>I'm a software developer with a passion for system integration,<br>accessibility, and game development.</p>
             <p id=position class=layer4>Currently @ ThreatAngler as a Cybersecurity Consultant</p>
         </div>
     </div>
-    <div id=pages class="links layer2">
+    <nav id=pages class="links layer2">
         <div class="link-nav layer3">
             <div class="pageIcon layer4"></div>
             <h2 class="layer4">Resume</h2>
-            <div class="pageIcon layer4">
-                <img src="">
+            <div class="pageIcon filter-textSecondary layer4">
+                <img src="assets\images\icons\arrow\Caret_Right_SM.svg">
             </div>
         </div>
         <div class="link-nav layer3">
             <div class="pageIcon layer4"></div>
             <h2 id="about" class="layer4">About</h2>
-            <div class="pageIcon 
-            layer4">
-                <img src="">
+            <div class="pageIcon filter-textSecondary layer4">
+                <img src="assets\images\icons\arrow\Caret_Right_SM.svg">
             </div>
         </div>
-    </div>
+    </nav>
 </div>
 <div id=second class="section layer1">
     <div id=projects class="content layer2">
@@ -61,11 +60,12 @@ sheet: home
         </div>
         <a id=morelink class="layer3">
             <h4 id=more class="layer4">More Projects</h4>
-            <div class="icon layer3">
+            <div class="icon layer4">
+                <img src="">
             </div>
         </a>
     </div>
-    <div id=socials class="links layer2">
+    <nav id=socials class="links layer2">
         <div class="link-external layer3">
             <div class="layer4"></div>
             <h2 class="layer4">GitHub</h2>
@@ -80,5 +80,5 @@ sheet: home
                 <img src="">
             </div>
         </div>
-    </div>
+    </nav>
 </div>

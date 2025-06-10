@@ -13,6 +13,30 @@ body {
     border-color: #{colors.$textPrimary};
 }
 
+.background:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #{colors.$pageColor};
+  top: -11vh;
+  right: -11vh;
+  width: 20vh;
+  height: 20vh;
+  transform: rotate(45deg);
+}
+
+.background:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #{colors.$pageColor};
+  bottom: -11vh;
+  left: -11vh;
+  width: 20vh;
+  height: 20vh;
+  transform: rotate(45deg);
+}
+
 .corner-top-l {
     border-top-color: #{colors.$textSecondary};
     border-left-color: #{colors.$textSecondary};
@@ -36,7 +60,7 @@ body {
     h1 {
         color: #{colors.$textPrimary};
     }
-    h3 {
+    p {
         color: #{colors.$textSecondary};
     }
 }
@@ -45,9 +69,8 @@ body {
     display: flex;
     flex-flow: column;
     justify-content: center;
-    font-size: 36px;
     text-align: center;
-    font-family: "Roboto";
+    font-family: "Share Tech";
 
     #selfdesc {
         color: #{colors.$textSecondary};
@@ -70,11 +93,15 @@ body {
     height: 100%;
     width: 50%;
     align-items: center;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
 
     h2 {
         font-family: "Jersey 25";
         text-transform: uppercase;
         font-size: 64px;
+        font-weight: 100;
         height: 100%;
         width: fit-content;
         align-content: center;
@@ -157,12 +184,15 @@ body {
 
     #intro {
         #logo {
-            width: 22%;
-            height: 28%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 10vw;
+            height: 28.5%;
 
             > div {
-                height: 100%;
-                padding: 10px;
+                width: 60%;
+                height: 60%;
             }
 
             img {
@@ -172,85 +202,110 @@ body {
         }
     
         #greet {
-            width: 55%;
-            height: 28%;
+            width: 78%;
+            height: 28.5%;
             display: flex;
             flex-direction: column;
             justify-content: center;
-    
-            :is(h1, h3) {
+            flex-grow: 1;
+
+            > * {
                 width: 100%;
                 margin: 0;
-                padding: 0;
             }
     
             #hey {
-                height: 28%;
                 font-size: 64px;
+                font-weight: 100;
+                line-height: 64px;
+                height: 64px;
             }
         
             #name {
-                height: 58%;
-                font-size: 124px;
+                font-size: 128px;
+                font-weight: 100;
+                line-height: 128px;
+                height: 128px;
             }
         }
     
         #bio {
             width: 100%;
-            height: 28%;
+            height: 28.5%;
+            font-size: 36px;
+            line-height: 42px;
 
             > p {
+                height: fit-content;
                 margin: 0;
-                padding: 0;
-            }
-
-            #selfdesc {
-                height: 38%;
-            }
-
-            #position {
-                height: 19%;
+                padding: 10px;
             }
         }
     }
 
+
     #projects {
-        justify-content: space-evenly;
-        align-content: space-around;
         font-family: "Jersey 25";
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding: 0px;
+        gap: 20px;
 
         > .project {
             padding: 5px;
-            width: 45%;
-            height: 38%;
+            width: 19.5vw;
+            height: 37.5%;
+            border-radius: 10px;
 
             display: flex;
             flex-direction: column;
 
             .preview {
                 background-color: #{colors.$basePrimaryLight};
-                height: 80%;
+                height: 82%;
+                border-radius: 5px;
             }
 
             .title {
                 font-size: 40px;
-                height: 20%;
+                font-weight: 100;
+                line-height: 36px;
+                height: 18%;
                 margin: 0;
-                text-align: center;
-            }
-        }
-
-        #morelink {
-            width: 10vw;
-            height: 10%;
-
-            #more {
-                margin: 0 0 0 0;
-                font-size: 36px;
-                height: 100%;
                 text-align: center;
                 align-content: center;
             }
         }
+
+        #morelink {
+            display: flex;
+            width: 10vw;
+            height: 8.5%;
+            border-radius: 5px;
+
+            #more {
+                margin: 0;
+                font-size: 36px;
+                font-weight: 100;
+                line-height: 36px;
+                text-align: center;
+                align-content: center;
+                width: 90%;
+            }
+
+            > div {
+                width: 10%;
+            }
+        }
+    }
+
+    #socials {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .link-external {   
+        width: 19.5vw;
     }
 } 

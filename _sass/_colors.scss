@@ -1,6 +1,29 @@
 $pageColor: #191818 !default; // Black
+.filter-pageColor {
+    filter: invert(0%) sepia(5%) saturate(463%) hue-rotate(354deg) brightness(91%) contrast(81%);
+}
+
 $basePrimary: #262322 !default; // Raisin Black
+.filter-basePrimary {
+    filter: invert(10%) sepia(1%) saturate(4527%) hue-rotate(326deg) brightness(99%) contrast(91%);
+}
+
 $basePrimaryLight: #2B2827 !default; // Raisin Black (Light)
+.filter-basePrimaryLight {
+    filter: invert(12%) sepia(8%) saturate(465%) hue-rotate(329deg) brightness(92%) contrast(88%);
+}
+
 $baseSecondary: #404040 !default; // Onyx
+.filter-baseSecondary {
+    filter: invert(15%) sepia(93%) saturate(0%) hue-rotate(180deg) brightness(92%) contrast(74%);
+}
+
 $textPrimary: #FFD23F !default; // Sunglow
+.filter-textPrimary {
+    filter: invert(83%) sepia(39%) saturate(834%) hue-rotate(342deg) brightness(104%) contrast(101%);
+}
+
 $textSecondary: #CED3DC !default; // French Gray
+.filter-textSecondary {
+    filter: invert(93%) sepia(8%) saturate(236%) hue-rotate(179deg) brightness(92%) contrast(88%);
+}
