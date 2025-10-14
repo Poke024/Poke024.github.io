@@ -1,9 +1,12 @@
-[class*="layer"] {
+[class*="dev-layer"] {
     border-width: 1px;
     border-style: solid;
 }
 
-.layer1 { border-color: orange; }
-.layer2 { border-color: blue; }
-.layer3 { border-color: purple; }
-.layer4 { border-color: green; }
+.dev-layer1 { border-color: red; }
+.dev-layer2 { border-color: orange; }
+.dev-layer3 { border-color: yellow; }
+.dev-layer4 { border-color: green; }
+.dev-layer5 { border-color: blue; }
+.dev-layer6 { border-color: indigo; }
+.dev-layer7 { border-color: violet; }

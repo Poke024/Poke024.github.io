@@ -1,0 +1,55 @@
+@font-face {
+    font-family: "Material Symbols Outlined";
+    font-style: normal;
+    src:
+        url("../fonts/Material-Symbols-Outlined.woff2") format("woff2"),
+        url("../fonts/Material-Symbols-Outlined.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Material Symbols Round";
+    font-style: normal;
+    src:
+        url("../fonts/Material-Symbols-Round.woff2") format("woff2"),
+        url("../fonts/Material-Symbols-Round.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Material Symbols Sharp";
+    font-style: normal;
+    src:
+        url("../fonts/Material-Symbols-Sharp.woff2") format("woff2"),
+        url("../fonts/Material-Symbols-Sharp.ttf") format("truetype");
+}
+
+[class^="material-symbols-"] {
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+}
+
+.material-symbols-outlined { font-family: 'Material Symbols Outlined'; }
+.material-symbols-round { font-family: 'Material Symbols Round'; }
+.material-symbols-sharp { font-family: 'Material Symbols Sharp'; }
+
+.pageIcon {
+    font-size: 24px;
+    font-variation-settings: 'FILL' 0, 'wght' 700, 'GRAD' 200, 'opsz' 20;
+}
+
+.externalIcon {
+    font-size: 20px;
+    font-variation-settings: 'FILL' 0, 'wght' 700, 'GRAD' 0, 'opsz' 48;
+    margin-bottom: 2vh;
+}
+
+.projectsIcon {
+    font-size: 24px;
+    font-variation-settings: 'FILL' 0, 'wght' 700, 'GRAD' 200, 'opsz' 20;
+    align-self: center;
+}

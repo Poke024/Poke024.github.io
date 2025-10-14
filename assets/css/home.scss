@@ -1,7 +1,9 @@
 ---
 ---
+@use "material-symbols";
 @use "colors";
 @use "fonts";
+// @use "dev-layers";
 
 // Page Colors
 body {
@@ -125,7 +127,7 @@ body {
 
 .link-nav {
     color: #{colors.$textSecondary};
-    column-gap: 2.5%;
+    column-gap: 1%;
 }
 
 .project {
@@ -278,25 +280,31 @@ body {
             }
         }
 
+        > .project:hover {
+            cursor: pointer;
+        }
+
         #morelink {
             display: flex;
             width: 10vw;
             height: 8.5%;
             border-radius: 5px;
+            align-items: center;
+            justify-content: center;
 
             #more {
                 margin: 0;
-                font-size: 36px;
+                font-size: 2.25em;
                 font-weight: 100;
                 line-height: 36px;
                 text-align: center;
                 align-content: center;
-                width: 90%;
+                width: 80%;
             }
+        }
 
-            > div {
-                width: 10%;
-            }
+        #morelink:hover {
+            cursor: pointer;
         }
     }
 
