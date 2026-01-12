@@ -1,0 +1,20 @@
+[class*="frame"] {
+    position: absolute;
+
+    height: 10vw;
+    width: 10vw;
+
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 10px 0;
+    border-width: 2.5vw;
+}
+
+[class*="frame-top"] { top: min(2vh, 1vw); }
+
+[class*="frame-bot"] { bottom: min(2vh, 1vw); }
+
+.frame-top-l { left: 1vw; }
+.frame-top-r { right: 1vw; }
+.frame-bot-l { left: 1vw; }
+.frame-bot-r { right: 1vw; }

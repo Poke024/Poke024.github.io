@@ -22,53 +22,42 @@ sheet: home
     <nav id=pages class="links dev-layer2">
         <div class="link-nav dev-layer3">
             <div class="dev-layer4"></div>
-            <h2 class="dev-layer4">Resume</h2>
+            <h2 class="dev-layer4">About</h2>
             <span class="pageIcon material-symbols-outlined dev-layer4">arrow_forward_ios</span>
         </div>
         <div class="link-nav dev-layer3">
             <div class="dev-layer4"></div>
-            <h2 id="about" class="dev-layer4">About</h2>
+            <h2 class="dev-layer4">Work</h2>
             <span class="pageIcon material-symbols-outlined dev-layer4">arrow_forward_ios</span>
         </div>
     </nav>
 </div>
 <div id=second class="section dev-layer1">
     <div id=projects class="content dev-layer2">
+        {% assign to_display = site.projects | where: "featured", true %}
+        {% for project in to_display %}
         <div class="project dev-layer3">
-            <div class="preview dev-layer4">
+            <div class="title dev-layer4">
+                <img class="dev-layer5" src="assets/images/logos/{{ project.lang_logo_file }}">
+                <h4 class="dev-layer5">{{ project.name }}</h4>
+                <div class="title-corner"></div>
             </div>
-            <h4 class="title dev-layer4">Project Name</h4>
-        </div>
-        <div class="project dev-layer3">
             <div class="preview dev-layer4">
+                <img src="assets/images/projects/{{ project.pathname }}/{{ project.pathname }}_preview.png">
             </div>
-            <h4 class="title dev-layer4">Project Name</h4>
         </div>
-        <div class="project dev-layer3">
-            <div class="preview dev-layer4">
-            </div>
-            <h4 class="title dev-layer4">Project Name</h4>
-        </div>
-        <div class="project dev-layer3">
-            <div class="preview dev-layer4">
-            </div>
-            <h4 class="title dev-layer4">Project Name</h4>
-        </div>
-        <a id=morelink class="dev-layer3">
-            <h4 id=more class="dev-layer4">More Projects</h4>
-            <span class="projectsIcon material-symbols-outlined dev-layer4">arrow_right</span>
-        </a>
+        {% endfor %}
     </div>
     <nav id=socials class="links dev-layer2">
         <div class="link-external dev-layer3">
             <div class="dev-layer4"></div>
-            <h2 class="dev-layer4">GitHub</h2>
-            <span class="externalIcon material-symbols-outlined dev-layer4">open_in_new</span>
+            <h2 class="dev-layer4">Projects</h2>
+            <span class="pageIcon material-symbols-outlined dev-layer4">arrow_forward_ios</span>
         </div>
         <div class="link-external dev-layer3">
             <div class="dev-layer4"></div>
-            <h2 class="dev-layer4">LinkedIn</h2>
-            <span class="externalIcon material-symbols-outlined dev-layer4">open_in_new</span>
+            <h2 class="dev-layer4">Contact</h2>
+            <span class="pageIcon material-symbols-outlined dev-layer4">arrow_forward_ios</span>
         </div>
     </nav>
 </div>

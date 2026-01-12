@@ -39,12 +39,12 @@ body {
   transform: rotate(45deg);
 }
 
-.corner-top-l {
+.frame-top-l {
     border-top-color: #{colors.$textSecondary};
     border-left-color: #{colors.$textSecondary};
 }
 
-.corner-bot-r {
+.frame-bot-r {
     border-right-color: #{colors.$textSecondary};
     border-bottom-color: #{colors.$textSecondary};
 }
@@ -247,36 +247,72 @@ body {
 
 
     #projects {
-        font-family: "Jersey 25";
         justify-content: center;
-        align-items: center;
-        align-content: center;
-        padding: 0px;
         gap: 20px;
 
         > .project {
-            padding: 5px;
             width: 19.5vw;
             height: 37.5%;
             border-radius: 10px;
+            background-color: transparent;
 
             display: flex;
             flex-direction: column;
 
-            .preview {
-                background-color: #{colors.$basePrimaryLight};
-                height: 82%;
-                border-radius: 5px;
+            .title {
+                height: 18%;
+                width: fit-content;
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: flex-start;
+                justify-content: baseline;
+
+                > img {
+                    background-color: #{colors.$baseSecondary};
+                    height: 100%;
+                    margin: 0;
+                    padding: .75vh;
+                }
+
+                > h4 {
+                    background-color: #{colors.$baseSecondary};
+                    height: 100%;
+                    white-space: nowrap;
+                    font-family: "Jersey 25";
+                    font-size: 36px;
+                    font-weight: 100;
+                    line-height: 36px;
+                    text-align: left;
+                    align-content: center;
+                    margin: 0;
+                }
+
+                > .title-corner {
+                    height: 100%;
+                    padding: 0px;
+                    margin: 0px;
+                    border-top: 2.5cqh solid transparent;
+                    border-right: 2.5cqh solid transparent;
+                    
+                    border-left: 2.5cqh solid #{colors.$baseSecondary};
+                    border-bottom: 2.5cqh solid #{colors.$baseSecondary};
+                }
             }
 
-            .title {
-                font-size: 40px;
-                font-weight: 100;
-                line-height: 36px;
-                height: 18%;
-                margin: 0;
-                text-align: center;
-                align-content: center;
+            .preview {
+                background-color: #{colors.$baseSecondary};
+                padding: 2%;
+                height: 82%;
+                border-radius: 5px;
+                border-top-left-radius: 0px;
+
+                > img {
+                    height: 100%;
+                    width: 100%;
+                    margin: 0;
+                    border-radius: 5px;
+                    background-color: #{colors.$basePrimary}
+                }
             }
         }
 
