@@ -1,20 +1,20 @@
 [class*="frame"] {
     position: absolute;
 
-    height: 10vw;
-    width: 10vw;
+    height: 10vmax;
+    width: 10vmax;
 
     border-color: transparent;
     border-style: solid;
-    border-radius: 10px 0;
-    border-width: 2.5vw;
+    border-radius: 1vmin 0;
+    border-width: 2.5vmax;
 }
 
-[class*="frame-top"] { top: min(2vh, 1vw); }
+[class*="frame-top"] { top: 1vmax; }
 
-[class*="frame-bot"] { bottom: min(2vh, 1vw); }
+[class*="frame-bot"] { bottom: 1vmax; }
 
-.frame-top-l { left: 1vw; }
-.frame-top-r { right: 1vw; }
-.frame-bot-l { left: 1vw; }
-.frame-bot-r { right: 1vw; }
+.frame-top-l { left: 1vmax; }
+.frame-top-r { right: 1vmax; }
+.frame-bot-l { left: 1vmax; }
+.frame-bot-r { right: 1vmax; }

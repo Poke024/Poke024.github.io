@@ -10,35 +10,6 @@ body {
     background-color: #{colors.$pageColor};
 }
 
-.background {
-    background-color: #{colors.$basePrimary};
-    border-color: #{colors.$textPrimary};
-}
-
-.background:before {
-  content: "";
-  display: block;
-  position: absolute;
-  background-color: #{colors.$pageColor};
-  top: -11vh;
-  right: -11vh;
-  width: 20vh;
-  height: 20vh;
-  transform: rotate(45deg);
-}
-
-.background:after {
-  content: "";
-  display: block;
-  position: absolute;
-  background-color: #{colors.$pageColor};
-  bottom: -11vh;
-  left: -11vh;
-  width: 20vh;
-  height: 20vh;
-  transform: rotate(45deg);
-}
-
 .frame-top-l {
     border-top-color: #{colors.$textSecondary};
     border-left-color: #{colors.$textSecondary};
@@ -102,7 +73,7 @@ body {
     h2 {
         font-family: "Jersey 25";
         text-transform: uppercase;
-        font-size: 64px;
+        font-size: 5vmin;
         font-weight: 100;
         height: 100%;
         width: fit-content;
@@ -140,50 +111,131 @@ body {
     color: #{colors.$textPrimary};
 }
 
-/* XS and SmallMedium devices (phones to portrait tablets, 768px and up) */
-@media only screen and (max-width: 768px) {
-    .background {
-        left: 1.5vw;
-        top: 4vh;
-        width: 97vw;
-        height: 92vh;
-    }
-} 
+// background
+.background {
+    background-color: #{colors.$basePrimary};
+    border-color: #{colors.$textPrimary};
+}
 
-/* Medium, Large, and XL devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media (orientation: landscape) {
     .background {
-        left: 1.5vw;
-        top: 3vh;
+        left: 1.5vmax;
+        top: 3vmin;
         width: 97vw;
         height: 94vh;
     }
 
+    .background:before {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: #{colors.$pageColor};
+        top: -11vmin;
+        right: -11vmin;
+        width: 20vmin;
+        height: 20vmin;
+        transform: rotate(45deg);
+    }
+
+    .background:after {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: #{colors.$pageColor};
+        bottom: -11vmin;
+        left: -11vmin;
+        width: 20vmin;
+        height: 20vmin;
+        transform: rotate(45deg);
+    }
+}
+
+@media (orientation: portrait) {
+    .background {
+        left: 3vmin;
+        top: 2vmax;
+        width: 94vw;
+        height: 96vh;
+    }
+    
+    .background:before {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: #{colors.$pageColor};
+        top: -6vmax;
+        right: -6vmax;
+        width: 10vmax;
+        height: 10vmax;
+        transform: rotate(45deg);
+    }
+
+    .background:after {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: #{colors.$pageColor};
+        bottom: -6vmax;
+        left: -6vmax;
+        width: 10vmax;
+        height: 10vmax;
+        transform: rotate(45deg);
+    }
+}
+
+// main
+@media (orientation: landscape) {
     main {
         width: 93vw;
         height: 86vh;
-    
+
         top: 7vh;
         left: 3.5vw;
 
         flex-direction: row;
         align-items: center;
     }
+}
 
+@media (orientation: portrait) {
+    main {
+        width: 93vw;
+        height: 86vh;
+
+        top: 7vh;
+        left: 3.5vw;
+
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+// section
+@media (orientation: landscape) {
     .section {
         width: 50%;
         height: 80%;
     }
+}
 
-    .content {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-content: center;
-
-        height: 87.5%;
+@media (orientation: portrait) {
+    .section {
+        width: 80%;
+        height: 50%;
     }
+}
 
+// content
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    height: 87.5%;
+}
+
+// intro
+@media (orientation: landscape) {
     #intro {
         #logo {
             display: flex;
@@ -202,7 +254,7 @@ body {
                 height: 100%;
             }
         }
-    
+
         #greet {
             width: 78%;
             height: 28.5%;
@@ -215,7 +267,7 @@ body {
                 width: 100%;
                 margin: 0;
             }
-    
+
             #hey {
                 font-size: 64px;
                 font-weight: 100;
@@ -230,7 +282,7 @@ body {
                 height: 128px;
             }
         }
-    
+
         #bio {
             width: 100%;
             height: 28.5%;
@@ -244,112 +296,175 @@ body {
             }
         }
     }
+}
 
-
-    #projects {
-        justify-content: center;
-        gap: 20px;
-
-        > .project {
-            width: 19.5vw;
-            height: 37.5%;
-            border-radius: 10px;
-            background-color: transparent;
-
+@media (orientation: portrait) {
+    #intro {
+        #logo {
             display: flex;
-            flex-direction: column;
-
-            .title {
-                height: 18%;
-                width: fit-content;
-                display: flex;
-                flex-flow: row nowrap;
-                align-items: flex-start;
-                justify-content: baseline;
-
-                > img {
-                    background-color: #{colors.$baseSecondary};
-                    height: 100%;
-                    margin: 0;
-                    padding: .75vh;
-                }
-
-                > h4 {
-                    background-color: #{colors.$baseSecondary};
-                    height: 100%;
-                    white-space: nowrap;
-                    font-family: "Jersey 25";
-                    font-size: 36px;
-                    font-weight: 100;
-                    line-height: 36px;
-                    text-align: left;
-                    align-content: center;
-                    margin: 0;
-                }
-
-                > .title-corner {
-                    height: 100%;
-                    padding: 0px;
-                    margin: 0px;
-                    border-top: 2.5cqh solid transparent;
-                    border-right: 2.5cqh solid transparent;
-                    
-                    border-left: 2.5cqh solid #{colors.$baseSecondary};
-                    border-bottom: 2.5cqh solid #{colors.$baseSecondary};
-                }
-            }
-
-            .preview {
-                background-color: #{colors.$baseSecondary};
-                padding: 2%;
-                height: 82%;
-                border-radius: 5px;
-                border-top-left-radius: 0px;
-
-                > img {
-                    height: 100%;
-                    width: 100%;
-                    margin: 0;
-                    border-radius: 5px;
-                    background-color: #{colors.$basePrimary}
-                }
-            }
-        }
-
-        > .project:hover {
-            cursor: pointer;
-        }
-
-        #morelink {
-            display: flex;
-            width: 10vw;
-            height: 8.5%;
-            border-radius: 5px;
             align-items: center;
             justify-content: center;
+            width: 10vw;
+            height: 28.5%;
 
-            #more {
-                margin: 0;
-                font-size: 2.25em;
-                font-weight: 100;
-                line-height: 36px;
-                text-align: center;
-                align-content: center;
-                width: 80%;
+            > div {
+                width: 60%;
+                height: 60%;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
             }
         }
 
-        #morelink:hover {
-            cursor: pointer;
+        #greet {
+            width: 74%;
+            height: 28.5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-grow: 1;
+
+            > * {
+                width: 100%;
+                margin: 0;
+            }
+
+            #hey {
+                font-size: 64px;
+                font-weight: 100;
+                line-height: 64px;
+                height: 64px;
+            }
+        
+            #name {
+                font-size: 128px;
+                font-weight: 100;
+                line-height: 128px;
+                height: 128px;
+            }
+        }
+
+        #bio {
+            width: 100%;
+            height: 28.5%;
+            font-size: 36px;
+            line-height: 42px;
+
+            > p {
+                height: fit-content;
+                margin: 0;
+                padding: 10px;
+            }
+        }
+    }
+}
+
+
+#projects {
+    justify-content: center;
+    gap: 20px;
+
+    > .project {
+        width: 19.5vw;
+        height: 37.5%;
+        border-radius: 10px;
+        background-color: transparent;
+
+        display: flex;
+        flex-direction: column;
+
+        .title {
+            height: 18%;
+            width: fit-content;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: flex-start;
+            justify-content: baseline;
+
+            > img {
+                background-color: #{colors.$baseSecondary};
+                height: 100%;
+                margin: 0;
+                padding: .75vh;
+            }
+
+            > h4 {
+                background-color: #{colors.$baseSecondary};
+                height: 100%;
+                white-space: nowrap;
+                font-family: "Jersey 25";
+                font-size: 36px;
+                font-weight: 100;
+                line-height: 36px;
+                text-align: left;
+                align-content: center;
+                margin: 0;
+            }
+
+            > .title-corner {
+                height: 100%;
+                padding: 0px;
+                margin: 0px;
+                border-top: 2.5cqh solid transparent;
+                border-right: 2.5cqh solid transparent;
+                
+                border-left: 2.5cqh solid #{colors.$baseSecondary};
+                border-bottom: 2.5cqh solid #{colors.$baseSecondary};
+            }
+        }
+
+        .preview {
+            background-color: #{colors.$baseSecondary};
+            padding: 2%;
+            height: 82%;
+            border-radius: 5px;
+            border-top-left-radius: 0px;
+
+            > img {
+                height: 100%;
+                width: 100%;
+                margin: 0;
+                border-radius: 5px;
+                background-color: #{colors.$basePrimary}
+            }
         }
     }
 
-    #socials {
-        justify-content: center;
-        gap: 20px;
+    > .project:hover {
+        cursor: pointer;
     }
 
-    .link-external {   
-        width: 19.5vw;
+    #morelink {
+        display: flex;
+        width: 10vw;
+        height: 8.5%;
+        border-radius: 5px;
+        align-items: center;
+        justify-content: center;
+
+        #more {
+            margin: 0;
+            font-size: 2.25em;
+            font-weight: 100;
+            line-height: 36px;
+            text-align: center;
+            align-content: center;
+            width: 80%;
+        }
     }
-} 
+
+    #morelink:hover {
+        cursor: pointer;
+    }
+}
+
+#socials {
+    justify-content: center;
+    gap: 20px;
+}
+
+.link-external {   
+    width: 19.5vw;
+}
