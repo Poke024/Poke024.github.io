@@ -15,7 +15,7 @@ sheet: home
             <h1 id=name class="dev-layer4">Adair Torres</h1>
         </div>
         <div id=bio class="dev-layer3">
-            <p id=selfdesc class="dev-layer4">I'm a software developer with a passion for system integration,<br>accessibility, and game development.</p>
+            <p id=selfdesc class="dev-layer4">I'm a software developer with a passion for system integration, accessibility, and game development.</p>
             <p id=position class="dev-layer4">Currently @ ThreatAngler as a Cybersecurity Consultant</p>
         </div>
     </div>

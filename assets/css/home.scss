@@ -27,37 +27,10 @@ body {
     flex-direction: column;
 }
 
-#greet {
-    font-family: "Jersey 25";
-
-    h1 {
-        color: #{colors.$textPrimary};
-    }
-    p {
-        color: #{colors.$textSecondary};
-    }
-}
-
-#bio {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    text-align: center;
-    font-family: "Share Tech";
-
-    #selfdesc {
-        color: #{colors.$textSecondary};
-    }
-    #position {
-        color: #{colors.$textPrimary};
-    }
-}
-
 .links {
     width: 100%;
-    height: 12.5%;
+    height: 4vmax;
     display: flex;
-    justify-content: space-between;
 }
 
 [class*="link-"] {
@@ -184,29 +157,23 @@ body {
 }
 
 // main
+main {
+    width: 93vw;
+    height: 86vh;
+    top: 7vh;
+    left: 3.5vw;
+    align-items: center;
+}
+
 @media (orientation: landscape) {
     main {
-        width: 93vw;
-        height: 86vh;
-
-        top: 7vh;
-        left: 3.5vw;
-
         flex-direction: row;
-        align-items: center;
     }
 }
 
 @media (orientation: portrait) {
     main {
-        width: 93vw;
-        height: 86vh;
-
-        top: 7vh;
-        left: 3.5vw;
-
         flex-direction: column;
-        align-items: center;
     }
 }
 
@@ -221,9 +188,17 @@ body {
 @media (orientation: portrait) {
     .section {
         width: 80%;
-        height: 50%;
+    }
+
+    #first {
+        height: 35%;
+    }
+
+    #second {
+        height: 65%;
     }
 }
+
 
 // content
 .content {
@@ -231,143 +206,108 @@ body {
     flex-wrap: wrap;
     flex-direction: row;
     align-content: center;
-    height: 87.5%;
+}
+
+@media (orientation: landscape) {
+    .content {
+        height: 87.5%;
+    }
 }
 
 // intro
-@media (orientation: landscape) {
-    #intro {
-        #logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 10vw;
-            height: 28.5%;
+#intro {
+    @media (orientation: portrait) {
+        align-content: first baseline;
+    }
 
-            > div {
-                width: 60%;
-                height: 60%;
-            }
 
-            img {
-                width: 100%;
-                height: 100%;
-            }
+    #logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 22%;
+        height: 20vmin;
+
+        > div {
+            width: 60%;
+            height: 60%;
         }
 
-        #greet {
-            width: 78%;
-            height: 28.5%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            flex-grow: 1;
-
-            > * {
-                width: 100%;
-                margin: 0;
-            }
-
-            #hey {
-                font-size: 64px;
-                font-weight: 100;
-                line-height: 64px;
-                height: 64px;
-            }
-        
-            #name {
-                font-size: 128px;
-                font-weight: 100;
-                line-height: 128px;
-                height: 128px;
-            }
-        }
-
-        #bio {
+        img {
             width: 100%;
-            height: 28.5%;
-            font-size: 36px;
-            line-height: 42px;
+            height: 100%;
+        }
+    }
 
-            > p {
-                height: fit-content;
-                margin: 0;
-                padding: 10px;
-            }
+    #greet {
+        width: 78%;
+        height: 20vmin;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-grow: 1;
+        font-family: "Jersey 25";
+
+        > * {
+            width: 100%;
+            margin: 0;
+        }
+
+        #hey {
+            font-size: 5vmin;
+            font-weight: 100;
+            line-height: 5vmin;
+            height: 5vmin;
+            color: #{colors.$textSecondary};
+        }
+    
+        #name {
+            font-size: 10vmin;
+            font-weight: 100;
+            line-height: 10vmin;
+            height: 10vmin;
+            color: #{colors.$textPrimary};
+        }
+    }
+
+    #bio {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        text-align: center;
+        font-family: "Share Tech";
+        width: 100%;
+        height: 20vmin;
+        font-size: 3vmin;
+        line-height: 4vmin;
+
+        > p {
+            height: fit-content;
+            margin: 0;
+            padding: 10px;
+        }
+
+        #selfdesc {
+            color: #{colors.$textSecondary};
+        }
+        #position {
+            color: #{colors.$textPrimary};
         }
     }
 }
 
 @media (orientation: portrait) {
-    #intro {
-        #logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 10vw;
-            height: 28.5%;
-
-            > div {
-                width: 60%;
-                height: 60%;
-            }
-
-            img {
-                width: 100%;
-                height: 100%;
-            }
-        }
-
-        #greet {
-            width: 74%;
-            height: 28.5%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            flex-grow: 1;
-
-            > * {
-                width: 100%;
-                margin: 0;
-            }
-
-            #hey {
-                font-size: 64px;
-                font-weight: 100;
-                line-height: 64px;
-                height: 64px;
-            }
-        
-            #name {
-                font-size: 128px;
-                font-weight: 100;
-                line-height: 128px;
-                height: 128px;
-            }
-        }
-
-        #bio {
-            width: 100%;
-            height: 28.5%;
-            font-size: 36px;
-            line-height: 42px;
-
-            > p {
-                height: fit-content;
-                margin: 0;
-                padding: 10px;
-            }
-        }
+    #projects {
+        height: 80%;
     }
 }
 
-
 #projects {
     justify-content: center;
-    gap: 20px;
+    gap: 2vmin;
 
     > .project {
-        width: 19.5vw;
+        width: 19.5vmax;
         height: 37.5%;
         border-radius: 10px;
         background-color: transparent;
