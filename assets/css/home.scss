@@ -3,7 +3,6 @@
 @use "material-symbols";
 @use "colors";
 @use "fonts";
-// @use "dev-layers";
 
 // Page Colors
 body {
@@ -20,58 +19,35 @@ body {
     border-bottom-color: #{colors.$textSecondary};
 }
 
-// Layout
-
-.half {
-    display: flex;
-    flex-direction: column;
+.slice-top-r {
+    border-top-color: #{colors.$pageColor};
+    border-right-color: #{colors.$pageColor};
 }
 
-.links {
-    width: 100%;
-    height: 4vmax;
-    display: flex;
+.slice-bot-l {
+    border-left-color: #{colors.$pageColor};
+    border-bottom-color: #{colors.$pageColor};
 }
 
-[class*="link-"] {
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    width: 50%;
-    align-items: center;
-    font-weight: normal;
-    font-style: normal;
-    font-variant: normal;
-
-    h2 {
-        font-family: "Jersey 25";
-        text-transform: uppercase;
-        font-size: 5vmin;
-        font-weight: 100;
-        height: 100%;
-        width: fit-content;
-        align-content: center;
-    }
-
-    div {
-        height: fit-content;
-        min-width: 2vh;
-        width: fit-content;
-    }
+.background {
+    background-color: #{colors.$basePrimary};
+    border-color: #{colors.$textPrimary};
 }
 
-.link-external {
-    color: #{colors.$textPrimary};
-    column-gap: 1%;
-
-    div {
-        margin-bottom: 20px;
-    }
-}
-
-.link-nav {
+#hey {
     color: #{colors.$textSecondary};
-    column-gap: 1%;
+}
+
+#name {
+    color: #{colors.$textPrimary};
+}
+
+#selfdesc {
+    color: #{colors.$textSecondary};
+}
+
+#position {
+    color: #{colors.$textPrimary};
 }
 
 .project {
@@ -79,332 +55,242 @@ body {
     color: #{colors.$textPrimary};
 }
 
-#morelink {
+.logo, .title, .preview {
     background-color: #{colors.$baseSecondary};
-    color: #{colors.$textPrimary};
-}
-
-// background
-.background {
-    background-color: #{colors.$basePrimary};
-    border-color: #{colors.$textPrimary};
-}
-
-@media (orientation: landscape) {
-    .background {
-        left: 1.5vmax;
-        top: 3vmin;
-        width: 97vw;
-        height: 94vh;
-    }
-
-    .background:before {
-        content: "";
-        display: block;
-        position: absolute;
-        background-color: #{colors.$pageColor};
-        top: -11vmin;
-        right: -11vmin;
-        width: 20vmin;
-        height: 20vmin;
-        transform: rotate(45deg);
-    }
-
-    .background:after {
-        content: "";
-        display: block;
-        position: absolute;
-        background-color: #{colors.$pageColor};
-        bottom: -11vmin;
-        left: -11vmin;
-        width: 20vmin;
-        height: 20vmin;
-        transform: rotate(45deg);
-    }
-}
-
-@media (orientation: portrait) {
-    .background {
-        left: 3vmin;
-        top: 2vmax;
-        width: 94vw;
-        height: 96vh;
-    }
-    
-    .background:before {
-        content: "";
-        display: block;
-        position: absolute;
-        background-color: #{colors.$pageColor};
-        top: -6vmax;
-        right: -6vmax;
-        width: 10vmax;
-        height: 10vmax;
-        transform: rotate(45deg);
-    }
-
-    .background:after {
-        content: "";
-        display: block;
-        position: absolute;
-        background-color: #{colors.$pageColor};
-        bottom: -6vmax;
-        left: -6vmax;
-        width: 10vmax;
-        height: 10vmax;
-        transform: rotate(45deg);
-    }
-}
-
-// main
-main {
-    width: 93vw;
-    height: 86vh;
-    top: 7vh;
-    left: 3.5vw;
-    align-items: center;
-}
-
-@media (orientation: landscape) {
-    main {
-        flex-direction: row;
-    }
-}
-
-@media (orientation: portrait) {
-    main {
-        flex-direction: column;
-    }
 }
 
 // section
-@media (orientation: landscape) {
-    .section {
+.section {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: stretch;
+    overflow: hidden;
+
+    @media (orientation: landscape) {
         width: 50%;
-        height: 80%;
+        height: 100%;
+    }
+    
+    @media (orientation: portrait) {
+        width: 100%;
     }
 }
 
 @media (orientation: portrait) {
-    .section {
-        width: 80%;
-    }
-
     #first {
-        height: 35%;
+        height: 40%;
     }
 
     #second {
-        height: 65%;
+        height: 60%;
     }
 }
-
 
 // content
 .content {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-content: center;
-}
+    flex-grow: 1;
 
-@media (orientation: landscape) {
-    .content {
-        height: 87.5%;
+    @media (orientation: landscape) {
+        justify-content: center;
+        gap: 5vh;
     }
-}
 
-// intro
-#intro {
     @media (orientation: portrait) {
-        align-content: first baseline;
+        justify-content: space-evenly;
     }
+}
 
+#intro {
+    flex-direction: column;
 
-    #logo {
+    #header {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 22%;
-        height: 20vmin;
-
-        > div {
-            width: 60%;
-            height: 60%;
+        width: 100%;
+        justify-content: space-evenly;
+        
+        #mylogo {
+            width: 20%;
         }
 
-        img {
-            width: 100%;
-            height: 100%;
-        }
-    }
+        #greet {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-family: "Jersey 25";
 
-    #greet {
-        width: 78%;
-        height: 20vmin;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        flex-grow: 1;
-        font-family: "Jersey 25";
+            > * {
+                width: 100%;
+                margin: 0;
+                font-weight: 100;
+            }
 
-        > * {
-            width: 100%;
-            margin: 0;
-        }
+            #hey {
+                font-size: 3vmax;
+                line-height: 5vmin;
+                height: 5vmin;
+            }
 
-        #hey {
-            font-size: 5vmin;
-            font-weight: 100;
-            line-height: 5vmin;
-            height: 5vmin;
-            color: #{colors.$textSecondary};
-        }
-    
-        #name {
-            font-size: 10vmin;
-            font-weight: 100;
-            line-height: 10vmin;
-            height: 10vmin;
-            color: #{colors.$textPrimary};
+            #name {
+                font-size: 10vmin;
+                line-height: 10vmin;
+                height: 10vmin;
+            }
         }
     }
 
-    #bio {
+    #blurb {
         display: flex;
         flex-flow: column;
-        justify-content: center;
         text-align: center;
         font-family: "Share Tech";
-        width: 100%;
-        height: 20vmin;
-        font-size: 3vmin;
-        line-height: 4vmin;
+        gap: 1svh;
 
         > p {
+            font-size: 2vmax;
             height: fit-content;
             margin: 0;
             padding: 10px;
         }
-
-        #selfdesc {
-            color: #{colors.$textSecondary};
-        }
-        #position {
-            color: #{colors.$textPrimary};
-        }
     }
 }
 
-@media (orientation: portrait) {
-    #projects {
-        height: 80%;
-    }
-}
-
+// projects
 #projects {
-    justify-content: center;
-    gap: 2vmin;
+    @media (orientation: landscape) {
+        flex-flow: row wrap;
+        justify-content: center;
+        align-content: center;
+        overflow: hidden;
+    }
 
-    > .project {
-        width: 19.5vmax;
-        height: 37.5%;
-        border-radius: 10px;
+    @media (orientation: portrait) {
+        flex-flow: column;
+        overflow-y: scroll;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 1svh 0 1svh 0;
+        gap: 1svh;
+    }
+
+    .project {
         background-color: transparent;
-
         display: flex;
         flex-direction: column;
 
-        .title {
-            height: 18%;
-            width: fit-content;
+        @media (orientation: landscape) {
+            width: 40%;
+            height: 38%;
+        }
+
+        @media (orientation: portrait) {
+            width: 80%;
+            height: 50%;
+        }
+
+        .titlebar {
             display: flex;
-            flex-flow: row nowrap;
+            flex-flow: row;
             align-items: flex-start;
             justify-content: baseline;
 
-            > img {
-                background-color: #{colors.$baseSecondary};
-                height: 100%;
-                margin: 0;
-                padding: .75vh;
+            @media (orientation: landscape) {
+                height: 15%;
             }
 
-            > h4 {
-                background-color: #{colors.$baseSecondary};
+            @media (orientation: portrait) {
+                height: 20%;
+            }
+
+            .logo {
                 height: 100%;
+                margin: 0;
+                padding: .5svh .5svh .5svh 2%;
+            }
+
+            .title {
+                height: 100%;
+                max-width: 80%;
                 white-space: nowrap;
                 font-family: "Jersey 25";
-                font-size: 36px;
                 font-weight: 100;
-                line-height: 36px;
                 text-align: left;
                 align-content: center;
                 margin: 0;
+                cursor: pointer;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                
+                @media (orientation: landscape) {
+                    font-size: 3vmin;
+                }
+
+                @media (orientation: portrait) {
+                    font-size: 2vmax;
+                }
             }
 
-            > .title-corner {
-                height: 100%;
-                padding: 0px;
-                margin: 0px;
-                border-top: 2.5cqh solid transparent;
-                border-right: 2.5cqh solid transparent;
+            .slant {
+                border-top: 3cqh solid transparent;
+                border-right: 3cqh solid transparent;
                 
-                border-left: 2.5cqh solid #{colors.$baseSecondary};
-                border-bottom: 2.5cqh solid #{colors.$baseSecondary};
+                border-left: 3cqh solid #{colors.$baseSecondary};
+                border-bottom: 3cqh solid #{colors.$baseSecondary};
             }
         }
 
         .preview {
-            background-color: #{colors.$baseSecondary};
             padding: 2%;
-            height: 82%;
+            flex-grow: 1;
             border-radius: 5px;
             border-top-left-radius: 0px;
-
-            > img {
-                height: 100%;
-                width: 100%;
-                margin: 0;
-                border-radius: 5px;
-                background-color: #{colors.$basePrimary}
-            }
+            cursor: pointer;
+            height: 100%;
         }
-    }
-
-    > .project:hover {
-        cursor: pointer;
-    }
-
-    #morelink {
-        display: flex;
-        width: 10vw;
-        height: 8.5%;
-        border-radius: 5px;
-        align-items: center;
-        justify-content: center;
-
-        #more {
-            margin: 0;
-            font-size: 2.25em;
-            font-weight: 100;
-            line-height: 36px;
-            text-align: center;
-            align-content: center;
-            width: 80%;
-        }
-    }
-
-    #morelink:hover {
-        cursor: pointer;
     }
 }
 
-#socials {
+// links
+.links {
+    width: 100%;
+    display: flex;
+    height: 10%;
+
+    @media (orientation: landscape) {
+        height: 10%;
+    }
+
+    @media (orientation: portrait) {
+        height: 6svh;
+    }
+}
+
+.link-nav {
+    display: flex;
     justify-content: center;
-    gap: 20px;
+    width: 50%;
+    align-items: center;
+
+    h2 {
+        font-family: "Jersey 25";
+        font-size: 6vmin;
+        font-weight: 100;
+        height: 100%;
+        align-content: center;
+        cursor: pointer;
+    }
+
+    div {
+        min-width: 2svh;
+    }
 }
 
-.link-external {   
-    width: 19.5vw;
+#nav-one {
+    color: #{colors.$textSecondary};
+}
+
+#nav-two {
+    color: #{colors.$textPrimary};
 }

@@ -4,11 +4,14 @@
     {% include head-custom.html %}
   </head>
   <body>
-    <div class="background"></div>
+    <div class="background">
+      <main class="dev-layer6">
+        {{ content }}
+      </main>
+    </div>
     <div class="frame-top-l"></div>
+    <div class="slice-top-r"></div>
+    <div class="slice-bot-l"></div>
     <div class="frame-bot-r"></div>
-    <main>
-      {{ content }}
-    </main>
   </body>
 </html>

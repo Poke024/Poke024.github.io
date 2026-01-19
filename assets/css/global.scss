@@ -1,24 +1,65 @@
 ---
 ---
 @use "dev-layers";
-@use "frames";
+@use "corners";
 
 * {
     box-sizing: border-box;
 }
 
-body {
+html, body {
     overflow: hidden;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
+// background
 .background {
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
     border-style: solid;
-    border-width: 1vh 0 1vh 0;
+    border-width: 1svh 0 1svh 0;
+}
+
+@media (orientation: landscape) {
+    .background {
+        left: 1.5vmax;
+        top: 3svh;
+        width: 97vw;
+        height: 94svh;
+    }
+}
+
+@media (orientation: portrait) {
+    .background {
+        left: 2vmax;
+        top: 2svh;
+        width: 92vw;
+        height: 96svh;
+    }
 }
 
 main {
-    position: absolute;
     display: flex;
+    z-index: 100;
+}
+
+@media (orientation: landscape) {
+    main {
+        width: 95%;
+        height: 90%;
+        flex-direction: row;
+    }
+}
+
+@media (orientation: portrait) {
+    main {
+        width: 85%;
+        height: 95%;
+        flex-direction: column;
+    }
 }
