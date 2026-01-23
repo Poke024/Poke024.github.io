@@ -38,6 +38,8 @@
 .material-symbols-sharp { font-family: 'Material Symbols Sharp'; }
 
 .navIcon {
+    font-variation-settings: 'FILL' 0, 'wght' 700, 'GRAD' 200, 'opsz' 20;
+    
     @media (orientation: landscape) {
         font-size: 3vmin;
     }
@@ -45,7 +47,6 @@
     @media (orientation: portrait) {
         font-size: 2svh;
     }
-    font-variation-settings: 'FILL' 0, 'wght' 700, 'GRAD' 200, 'opsz' 20;
 }
 
 .externalIcon {

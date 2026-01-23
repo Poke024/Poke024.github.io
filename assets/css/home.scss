@@ -171,25 +171,24 @@ body {
         justify-content: flex-start;
         align-items: center;
         padding: 1svh 0 1svh 0;
-        gap: 1svh;
+        row-gap: 1svh;
     }
 
     .project {
         background-color: transparent;
         display: flex;
         flex-direction: column;
-        overflow: hidden;
         border-radius: 5px;
         border-top-left-radius: 0px;
 
         @media (orientation: landscape) {
             width: 40%;
-            max-height: 38%;
+            height: 38%;
         }
 
         @media (orientation: portrait) {
             width: 80%;
-            max-height: 50%;
+            height: 60%;
         }
 
         .titlebar {
@@ -246,7 +245,7 @@ body {
 
         .preview {
             padding: 2%;
-            flex-grow: 1;
+            height: 100%;
             border-radius: 5px;
             border-top-left-radius: 0px;
             cursor: pointer;
