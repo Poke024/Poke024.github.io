@@ -2,9 +2,13 @@
 ---
 // @use "dev-layers";
 @use "corners";
+@use "material-symbols";
+@use "colors";
+@use "fonts";
 
 * {
     box-sizing: border-box;
+    outline: 1px solid red;
 }
 
 html, body {
@@ -12,6 +16,10 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+}
+
+body {
+    background-color: #{colors.$pageColor};
 }
 
 // background
@@ -23,6 +31,8 @@ html, body {
     
     border-style: solid;
     border-width: 1svh 0 1svh 0;
+    background-color: #{colors.$basePrimary};
+    border-color: #{colors.$textPrimary};
 }
 
 @media (orientation: landscape) {
@@ -43,8 +53,32 @@ html, body {
     }
 }
 
+// frames
+.frame-top-l {
+    border-top-color: #{colors.$textSecondary};
+    border-left-color: #{colors.$textSecondary};
+}
+
+.frame-bot-r {
+    border-right-color: #{colors.$textSecondary};
+    border-bottom-color: #{colors.$textSecondary};
+}
+
+.slice-top-r {
+    border-top-color: #{colors.$pageColor};
+    border-right-color: #{colors.$pageColor};
+}
+
+.slice-bot-l {
+    border-left-color: #{colors.$pageColor};
+    border-bottom-color: #{colors.$pageColor};
+}
+
 main {
+    align-items: center;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     z-index: 100;
 }
 
@@ -52,7 +86,6 @@ main {
     main {
         width: 95%;
         height: 90%;
-        flex-direction: row;
     }
 }
 
@@ -60,6 +93,5 @@ main {
     main {
         width: 85%;
         height: 95%;
-        flex-direction: column;
     }
 }

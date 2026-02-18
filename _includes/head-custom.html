@@ -2,9 +2,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>{{ page.title }}</title>
 <link rel="stylesheet" href="/assets/css/global.css">
-<link rel="stylesheet" href="/assets/css/{{ page.sheet }}.css">
+<link rel="stylesheet" href="/assets/css/material-symbols.scss">
+<link rel="stylesheet" href="/assets/css/navigation.css">
+<link rel="stylesheet" href="/assets/css/pages/{{ page.sheet }}.css">
 <link rel="shortcut icon" type="image/x-icon" href="/assets/images/icons/favicon.ico">
 <!-- <script src="https://kit.fontawesome.com/d9a61ee927.js" crossorigin="anonymous"></script> -->
+{% if page.title == "Contact" %}
 <!-- <script>
 function toggleMenu(x) {
     x.classList.toggle("change");
@@ -25,3 +28,4 @@ function setEmail() {
     elink.href = `mailto:${me}@${place}`;
 }
 </script> -->
+{% endif %}

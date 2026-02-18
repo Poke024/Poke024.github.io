@@ -1,0 +1,10 @@
+
+<nav class="navSplit">
+    <ul>
+        {% for item in site.data.navigation.pages %}
+            {% if item.group == include.group %}
+                {% include nav-item.html link=item.link name=item.name color=item.color %}
+            {% endif %}
+        {% endfor %}
+    </ul>
+</nav>

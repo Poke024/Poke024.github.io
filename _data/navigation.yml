@@ -1,12 +1,24 @@
 pages:
   - name: Home
     link: /
-  - name: Projects
-    link: /projects.html
+    color: primary
+    group: 0
   - name: About
     link: /about.html
-  - name: Blog
-    link: /blog.html
+    color: secondary
+    group: 1
+  - name: Work
+    link: /work.html
+    color: secondary
+    group: 1
+  - name: Projects
+    link: /projects.html
+    color: primary
+    group: 2
+  - name: Contact
+    link: /contact.html
+    color: primary
+    group: 2
 
 socials:
   - name: GitHub

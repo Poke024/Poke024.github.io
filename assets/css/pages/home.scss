@@ -1,38 +1,7 @@
 ---
 ---
-@use "material-symbols";
 @use "colors";
 @use "fonts";
-
-// Page Colors
-body {
-    background-color: #{colors.$pageColor};
-}
-
-.frame-top-l {
-    border-top-color: #{colors.$textSecondary};
-    border-left-color: #{colors.$textSecondary};
-}
-
-.frame-bot-r {
-    border-right-color: #{colors.$textSecondary};
-    border-bottom-color: #{colors.$textSecondary};
-}
-
-.slice-top-r {
-    border-top-color: #{colors.$pageColor};
-    border-right-color: #{colors.$pageColor};
-}
-
-.slice-bot-l {
-    border-left-color: #{colors.$pageColor};
-    border-bottom-color: #{colors.$pageColor};
-}
-
-.background {
-    background-color: #{colors.$basePrimary};
-    border-color: #{colors.$textPrimary};
-}
 
 #hey {
     color: #{colors.$textSecondary};
@@ -57,6 +26,12 @@ body {
 
 .logo, .title, .preview {
     background-color: #{colors.$baseSecondary};
+}
+
+@media (orientation: landscape) {
+    main {
+        flex-direction: row;
+    }
 }
 
 // section
@@ -91,6 +66,7 @@ body {
 .content {
     display: flex;
     flex-grow: 1;
+    max-height: 90%;
 
     @media (orientation: landscape) {
         justify-content: center;
@@ -251,47 +227,4 @@ body {
             cursor: pointer;
         }
     }
-}
-
-// links
-.links {
-    width: 100%;
-    display: flex;
-    height: 10%;
-
-    @media (orientation: landscape) {
-        height: 10%;
-    }
-
-    @media (orientation: portrait) {
-        height: 6svh;
-    }
-}
-
-.link-nav {
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    align-items: center;
-
-    h2 {
-        font-family: "Jersey 25";
-        font-size: 6vmin;
-        font-weight: 100;
-        height: 100%;
-        align-content: center;
-        cursor: pointer;
-    }
-
-    div {
-        min-width: 2svh;
-    }
-}
-
-#nav-one {
-    color: #{colors.$textSecondary};
-}
-
-#nav-two {
-    color: #{colors.$textPrimary};
 }

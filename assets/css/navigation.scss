@@ -1,0 +1,140 @@
+---
+---
+@use "colors";
+@use "fonts";
+
+// Complete Navigation Bar
+#navBar, .navSplit {
+    display: flex;
+    height: 10%;
+
+    ul {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        
+        .navItem {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            a {
+                align-items: center;
+                display: flex;
+                height: 100%;
+                text-decoration: inherit;
+
+                div { min-width: 2svh; }
+                
+                h2 {
+                    font-family: "Jersey 25";
+                    font-size: 6vmin;
+                    font-weight: 100;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                .icon {
+                    font-variation-settings: 'FILL' 0, 'wght' 700, 'GRAD' 200, 'opsz' 20;
+                    
+                    @media (orientation: landscape) { font-size: 3vmin; }
+                    @media (orientation: portrait) { font-size: 2svh;}
+                }
+            }
+
+            .primary { color: #{colors.$textPrimary}; }
+            .secondary { color: #{colors.$textSecondary}; }
+        }
+    }
+}
+
+#navBar {
+    .navItem { width: 25%; }
+}
+
+// Split Navigation Bar
+.navSplit {
+    @media (orientation: portrait) { height: 6svh; }
+    
+    ul {
+        .navItem { width: 50%; }
+    }
+}
+
+// Toggleable Navigation Menu
+#navControl {
+    align-items: center;
+    align-self: flex-end;
+    background-color: #{colors.$baseSecondary};
+    color: #{colors.$textPrimary};
+    cursor: pointer;
+    display: flex;
+    font-family: "Jersey 25";
+    font-size: 4vmin;
+    height: 5%;
+    gap: 2%;
+    justify-content: center;
+    width: 30%;
+
+    .icon {
+        font-variation-settings: 'FILL' 0, 'wght' 700, 'GRAD' 200, 'opsz' 20;
+
+        @media (orientation: landscape) { font-size: 5vmin; }
+        @media (orientation: portrait) { font-size: 3svh; }
+    }
+}
+
+@media (orientation: landscape) { #navControl { display: none; } }
+
+#navMenu {
+    background-color: #{colors.$baseSecondary};
+    display: absolute;
+    padding: 1svh;
+    visibility: hidden;
+
+    ul {
+        align-items: left;
+        display: flex;
+        flex-flow: column;
+        gap: 1svh;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        
+        .navItem {
+            align-items: center;
+            display: flex;
+            justify-content: flex-start;
+
+            a {
+                align-items: center;
+                display: flex;
+                gap: 1vw;
+                text-decoration: inherit;
+
+                div {
+                    display: none;
+                }
+
+                h2 {
+                    font-family: "Jersey 25";
+                    font-size: 6vmin;
+                    font-weight: 100;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                .icon {
+                    font-variation-settings: 'FILL' 0, 'wght' 700, 'GRAD' 200, 'opsz' 20;
+
+                    @media (orientation: landscape) { font-size: 3vmin; }
+                    @media (orientation: portrait) { font-size: 2svh;}
+                }
+            }
+
+            .primary { color: #{colors.$textPrimary}; }
+            .secondary { color: #{colors.$textSecondary}; }
+        }
+    }
+}

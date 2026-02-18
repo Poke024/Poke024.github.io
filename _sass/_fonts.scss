@@ -2,14 +2,20 @@
     font-family: "Jersey 25";
     src:
         url("../fonts/Jersey25-Regular.woff2") format("woff2"),
+        url("../../fonts/Jersey25-Regular.woff2") format("woff2"),
         url("../fonts/Jersey25-Regular.woff") format("woff"),
-        url("../fonts/Jersey25-Regular.ttf") format("truetype");
+        url("../../fonts/Jersey25-Regular.woff") format("woff"),
+        url("../fonts/Jersey25-Regular.ttf") format("truetype"),
+        url("../../fonts/Jersey25-Regular.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Share Tech";
     src:
         url("../fonts/ShareTech-Regular.woff2") format("woff2-variations"),
+        url("../../fonts/ShareTech-Regular.woff2") format("woff2-variations"),
         url("../fonts/ShareTech-Regular.woff") format("woff-variations"),
-        url("../fonts/ShareTech-Regular.ttf") format("truetype-variations");
+        url("../../fonts/ShareTech-Regular.woff") format("woff-variations"),
+        url("../fonts/ShareTech-Regular.ttf") format("truetype-variations"),
+        url("../../fonts/ShareTech-Regular.ttf") format("truetype-variations");
 }

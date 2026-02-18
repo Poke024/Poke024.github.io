@@ -1,0 +1,25 @@
+
+<div id="navControl" onclick="toggleMenu(this)">
+    <h2>Menu</h2>
+    <span class="icon material-symbols-outlined dev-layer2">menu</span>
+</div>
+<script>
+    function toggleMenu(x) {
+        let icon = x.getElementsByClassName("icon")[0];
+        let menu = document.getElementById("navMenu");
+        if (icon.textContent == "menu") {
+            icon.textContent = "close";
+            menu.style.visibility = "visible";
+        } else {
+            icon.textContent = "menu";
+            menu.style.visibility = "hidden";
+        }
+    }
+</script>
+<nav id="navMenu">
+    <ul>
+        {% for item in site.data.navigation.pages %}
+          {% include nav-item.html link=item.link name=item.name color=item.color %}
+        {% endfor %}
+    </ul>
+</nav>

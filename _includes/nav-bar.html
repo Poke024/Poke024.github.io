@@ -1,0 +1,11 @@
+<nav id="navBar">
+    <ul>
+        {% for item in site.data.navigation.pages %}
+            {% if item.name == "Home" %}
+                {% continue %}
+            {% else %}
+                {% include nav-item.html link=item.link name=item.name color=item.color %}
+            {% endif %}
+        {% endfor %}
+    </ul>
+</nav>
