@@ -50,48 +50,46 @@
 }
 
 #navBar {
+    width: 100%;
+
     .navItem { width: 25%; }
+
+    @media (orientation: portrait) {
+        display: none;
+        visibility: hidden;
+    }
 }
 
 // Split Navigation Bar
 .navSplit {
-    @media (orientation: portrait) { height: 6svh; }
+    .navItem { width: 50%; }
     
-    ul {
-        .navItem { width: 50%; }
-    }
+    @media (orientation: portrait) { height: 6svh; }
 }
 
 // Toggleable Navigation Menu
-#navControl {
-    align-items: center;
+#navContainer {
     align-self: flex-end;
-    background-color: #{colors.$baseSecondary};
     color: #{colors.$textPrimary};
-    cursor: pointer;
     display: flex;
+    flex-flow: column;
     font-family: "Jersey 25";
     font-size: 4vmin;
-    height: 5%;
-    gap: 2%;
-    justify-content: center;
-    width: 30%;
-
-    .icon {
-        font-variation-settings: 'FILL' 0, 'wght' 700, 'GRAD' 200, 'opsz' 20;
-
-        @media (orientation: landscape) { font-size: 5vmin; }
-        @media (orientation: portrait) { font-size: 3svh; }
+    gap: 1svh;
+    justify-content: flex-end;
+    
+    @media (orientation: landscape) {
+        display: none;
+        visibility: hidden;
     }
 }
 
-@media (orientation: landscape) { #navControl { display: none; } }
-
 #navMenu {
     background-color: #{colors.$baseSecondary};
-    display: absolute;
+    display: none;
     padding: 1svh;
     visibility: hidden;
+    width: 40svw;
 
     ul {
         align-items: left;
@@ -136,5 +134,26 @@
             .primary { color: #{colors.$textPrimary}; }
             .secondary { color: #{colors.$textSecondary}; }
         }
+    }
+}
+
+#navControl {
+    align-items: center;
+    align-self: flex-end;
+    background-color: #{colors.$baseSecondary};
+    cursor: pointer;
+    display: flex;
+    gap: 1svh;
+    justify-content: center;
+    padding: 0.5svh 1svh;
+    width: 25vw;
+
+    h2 { margin: 0; }
+
+    .icon {
+        font-variation-settings: 'FILL' 0, 'wght' 700, 'GRAD' 200, 'opsz' 20;
+
+        @media (orientation: landscape) { font-size: 5vmin; }
+        @media (orientation: portrait) { font-size: 3svh; }
     }
 }

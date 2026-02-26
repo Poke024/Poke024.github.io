@@ -1,14 +1,12 @@
 ---
 ---
-// @use "dev-layers";
 @use "corners";
-@use "material-symbols";
 @use "colors";
 @use "fonts";
 
 * {
     box-sizing: border-box;
-    outline: 1px solid red;
+    // outline: 1px solid red;
 }
 
 html, body {

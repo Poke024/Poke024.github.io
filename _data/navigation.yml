@@ -4,32 +4,18 @@ pages:
     color: primary
     group: 0
   - name: About
-    link: /about.html
+    link: /about
     color: secondary
     group: 1
   - name: Work
-    link: /work.html
+    link: /work
     color: secondary
     group: 1
   - name: Projects
-    link: /projects.html
+    link: /projects
     color: primary
     group: 2
   - name: Contact
-    link: /contact.html
+    link: /contact
     color: primary
     group: 2
-
-socials:
-  - name: GitHub
-    icon: fa-brands fa-github
-    src: ./assets/images/logos/github-mark.svg
-    url: https://github.com/Poke024
-  - name: LinkedIn
-    icon: fa-brands fa-linkedin
-    src: ./assets/images/logos/linkedin_128.png
-    url: https://www.linkedin.com/in/adair-torres/
-  - name: Twitter
-    icon: fa-brands fa-twitter
-    src: ./assets/images/logos/twitter_logo.svg
-    url: https://twitter.com/Poke0240

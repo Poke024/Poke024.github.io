@@ -1,7 +1,15 @@
-
-<div id="navControl" onclick="toggleMenu(this)">
-    <h2>Menu</h2>
-    <span class="icon material-symbols-outlined dev-layer2">menu</span>
+<div id="navContainer">
+    <nav id="navMenu">
+    <ul>
+        {% for item in site.data.navigation.pages %}
+          {% include nav-item.html link=item.link name=item.name color=item.color %}
+        {% endfor %}
+    </ul>
+    </nav>
+    <div id="navControl" onclick="toggleMenu(this)">
+        <h2>Menu</h2>
+        <span class="icon material-symbols-outlined dev-layer2">menu</span>
+    </div>
 </div>
 <script>
     function toggleMenu(x) {
@@ -10,16 +18,11 @@
         if (icon.textContent == "menu") {
             icon.textContent = "close";
             menu.style.visibility = "visible";
+            menu.style.display = "flex";
         } else {
             icon.textContent = "menu";
             menu.style.visibility = "hidden";
+            menu.style.display = "none";
         }
     }
 </script>
-<nav id="navMenu">
-    <ul>
-        {% for item in site.data.navigation.pages %}
-          {% include nav-item.html link=item.link name=item.name color=item.color %}
-        {% endfor %}
-    </ul>
-</nav>

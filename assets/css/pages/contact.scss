@@ -2,3 +2,45 @@
 ---
 @use "colors";
 @use "fonts";
+
+#content {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+
+    
+    @media (orientation: landscape) {
+        flex-flow: row;
+    }
+
+    @media (orientation: portrait) {
+        flex-flow: column;
+    }
+}
+
+.section {
+
+    @media (orientation: landscape) {
+        width: 50%;
+    }
+
+    @media (orientation: portrait) {
+        width: 100%;
+    }
+
+    
+    > h1 {
+        color: #{colors.$textPrimary};
+        font-family: "Jersey 25";
+    }
+}
+
+#socials {
+    ul { list-style-type: none; }
+
+    .socialLink {
+        color: #{colors.$textSecondary};
+        font-family: "Jersey 25";
+        text-decoration: inherit;
+    }
+}

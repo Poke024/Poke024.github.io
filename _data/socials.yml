@@ -1,0 +1,13 @@
+links:
+  - name: GitHub
+    icon: fa-brands fa-github
+    url: https://github.com/Poke024
+  - name: LinkedIn
+    icon: fa-brands fa-linkedin
+    url: https://www.linkedin.com/in/adair-torres/
+  - name: Bluesky
+    icon: fa-brands fa-bluesky
+    url: https://bsky.app/profile/pokedev.bsky.social
+  - name: Email
+    icon: fa-solid fa-envelope fa-lg
+    url: mailto:adair.tor24@gmail.com
