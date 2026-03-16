@@ -18,7 +18,12 @@ permalink: /contact
             </ul>
         </div>
     </div>
-    <div id="form" class="section">
+    <div class="section">
+        <div class="titlebar">
+            <div class="slant"></div>
+            <h4 class="title">Contact</h4>
+            <div class="slant"></div>
+        </div>
         <form>
             <div>
                 <h6>Name</h6>
